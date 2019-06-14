@@ -43,13 +43,15 @@ public enum HeifChannel
     Cr
 }
 
-public class HeifMetadata {
-   public byte[] Data { get; get; } // buffrer
+public class HeifMetadata 
+{
+   public byte[] ExifData { get; } // buffrer
    
-   public int Height {get; set; }
+   public int Height { get; }
    
-   public int Width {get; set; }
+   public int Width { get; }
 }
+
 public readonly struct HeifPlane 
 {
   public HeifPlane(int stride, IntPtr pointer)
