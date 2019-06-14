@@ -27,6 +27,8 @@ public sealed class HeifImage : IDisposable
   
   HeifPlane GetPlane(HeifChannel channel); 
   
+  byte[] ExifData { get; set; }
+  
   int Width { get; }
   
   int Height { get; }
@@ -41,6 +43,13 @@ public enum HeifChannel
     Cr
 }
 
+public class HeifMetadata {
+   public byte[] Data { get; get; } // buffrer
+   
+   public int Height {get; set; }
+   
+   public int Width {get; set; }
+}
 public readonly struct HeifPlane 
 {
   public HeifPlane(int stride, IntPtr pointer)
