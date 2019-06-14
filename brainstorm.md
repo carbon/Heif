@@ -45,7 +45,7 @@ public enum HeifChannel
 
 public class HeifMetadata 
 {
-   public byte[] ExifData { get; } // buffrer
+   public byte[] ExifData { get; }
    
    public int Height { get; }
    
