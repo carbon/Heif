@@ -26,12 +26,19 @@ public class HeifImage : IDisposable {
       this.managedBuffer = ptr; 
   } 
   
-  HeifPlane GetPlane(int index); 
+  HeifPlane GetPlane(HeifChannel channel); 
   
   int Width { get; }
   
   int Height { get; }
 }
+
+public enum HeifChannel {
+    Y,
+    Cb,
+    ...
+}
+
 
 public readonly struct HeifPlane 
 {
