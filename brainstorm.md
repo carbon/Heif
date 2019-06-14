@@ -22,14 +22,16 @@ public static class Hief {
 public class HeifBitmap : IDisposable {
 
 
-  public Hief(IntPtr ptr) { 
-      this.managedBuffer = ptr;
+  public Hief(IntPtr ptr, int stride) { 
+      this.managedBuffer = ptr; 
   } 
   
   Span<byte> Data { get; } // bytes
 
   PixelFormat PixelFormat { get; } 
-
+  
+  byte[] ColorProfile { get; }
+  
   int Width { get; }
   
   int Height { get; }
