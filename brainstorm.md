@@ -27,7 +27,7 @@ public sealed class HeifImage : IDisposable
   
   HeifPlane GetPlane(HeifChannel channel); 
   
-  byte[] ExifData { get; set; }
+  byte[] ExifData { get; }
   
   int Width { get; }
   
