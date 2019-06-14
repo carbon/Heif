@@ -27,10 +27,6 @@ public class HeifBitmap : IDisposable {
   } 
   
   Span<byte> Data { get; } // bytes
-
-  PixelFormat PixelFormat { get; } 
-  
-  byte[] ColorProfile { get; }
   
   int Width { get; }
   
