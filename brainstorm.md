@@ -31,7 +31,7 @@ public sealed class HeifImage : IDisposable
   
   int Height { get; }
   
-  Dispose() { get; }
+  void Dispose() { }
 }
 
 public enum HeifChannel 
