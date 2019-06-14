@@ -31,14 +31,18 @@ public class HeifImage : IDisposable {
   int Width { get; }
   
   int Height { get; }
-
-  int Stride { get; } // in bytes
 }
 
 public readonly struct HeifPlane 
 {
+  public HeifPlane(int stride, IntPtr pointer)
+  {
+  } 
   public int Stide { get; }
-  public Span<byte> Data {get;}
+  
+  public IntPtr Pointer {get; } 
+  
+  public Span<byte> Span { get; }
 }
 // v2: Do we have to read the entire buffer in memory? Can we lazily decode regions
 // v2: Consder color spaces / pixel format
