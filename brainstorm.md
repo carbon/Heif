@@ -9,7 +9,7 @@ $2,500 USD sponsorship.
 
 
 ```csharp
-namespace .Hief {
+public static class Hief {
   public HeifBitmap Decode(Stream stream) {
 
   }
