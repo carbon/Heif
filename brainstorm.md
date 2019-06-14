@@ -19,9 +19,8 @@ public static class Hief {
   }
 }
 
-public class HeifImage : IDisposable {
-
-
+public sealed class HeifImage : IDisposable 
+{
   internal Hief(IntPtr[] planePointer, int[] planeStrides) { 
       this.managedBuffer = ptr; 
   } 
@@ -31,28 +30,28 @@ public class HeifImage : IDisposable {
   int Width { get; }
   
   int Height { get; }
+  
+  Dispose() { get; }
 }
 
-public enum HeifChannel {
+public enum HeifChannel 
+{
     Y,
     Cb,
-    ...
+    Cr
 }
-
 
 public readonly struct HeifPlane 
 {
   public HeifPlane(int stride, IntPtr pointer)
   {
   } 
-  public int Stide { get; }
+  public int Stride { get; }
   
   public IntPtr Pointer {get; } 
   
   public Span<byte> Span { get; }
 }
-// v2: Do we have to read the entire buffer in memory? Can we lazily decode regions
-// v2: Consder color spaces / pixel format
 
 ```
 
@@ -81,5 +80,3 @@ Introp {
 }
 ...
 `
-
-
