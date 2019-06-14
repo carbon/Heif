@@ -36,25 +36,30 @@ public class HeifBitmap : IDisposable {
 
 ```
 
-// Consider using https://github.com/xoofx/CppAst to parse raw AST and generate csharp introp code
+Consider using https://github.com/xoofx/CppAst to parse raw AST and generate csharp introp code
 
-// https://github.com/strukturag/libheif/blob/master/libheif/heif.h
+https://github.com/strukturag/libheif/blob/master/libheif/heif.h
 
-HeifError { code, subcode }
-HeifErrorCode
-HeifSuberrorCode
-HeifBrand
-HeifReader
-HeifColorPrimaries
-HeifTransferCharacteristics
-HeifMatrixCoefficients
-HeifColorProfileNclx
-HeifCompressionFormat
-HeifChroma
-HeifColorspace
-HeifChannel
-HeifProgressStep
-HeifDecodingOptions
-HeifContext
+```
+Introp { 
+  HeifError { code, subcode }
+  HeifErrorCode
+  HeifSuberrorCode
+  HeifBrand
+  HeifReader
+  HeifColorPrimaries
+  HeifTransferCharacteristics
+  HeifMatrixCoefficients
+  HeifColorProfileNclx
+  HeifCompressionFormat
+  HeifChroma
+  HeifColorspace
+  HeifChannel
+  HeifProgressStep
+  HeifDecodingOptions
+  HeifContext
+}
+...
+`
 
 
