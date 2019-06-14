@@ -20,6 +20,12 @@ public static class Hief {
 }
 
 public class HeifBitmap : IDisposable {
+
+
+  public Hief(IntPtr ptr) { 
+      this.managedBuffer = ptr;
+  } 
+  
   Span<byte> Data { get; } // bytes
 
   PixelFormat PixelFormat { get; } 
