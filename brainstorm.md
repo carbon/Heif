@@ -9,7 +9,8 @@ $2,500 USD sponsorship.
 
 
 ```csharp
-public static class Hief {
+public static class Hief 
+{
   public HeifImage Decode(Span<byte> input) {
 
   }
@@ -21,10 +22,6 @@ public static class Hief {
 
 public sealed class HeifImage : IDisposable 
 {
-  internal Hief(IntPtr[] planePointer, int[] planeStrides) { 
-      this.managedBuffer = ptr; 
-  } 
-  
   HeifPlane GetPlane(HeifChannel channel); 
   
   byte[] ExifData { get; }
@@ -36,11 +33,11 @@ public sealed class HeifImage : IDisposable
   void Dispose() { }
 }
 
-public enum HeifChannel 
+public enum HeifChannel
 {
-    Y,
-    Cb,
-    Cr
+    Y = 1,
+    Cb = 2,
+    Cr = 3
 }
 
 public class HeifMetadata 
@@ -69,25 +66,4 @@ public readonly struct HeifPlane
 Consider using https://github.com/xoofx/CppAst to parse raw AST and generate csharp introp code
 
 https://github.com/strukturag/libheif/blob/master/libheif/heif.h
-
-```
-Introp { 
-  HeifError { code, subcode }
-  HeifErrorCode
-  HeifSuberrorCode
-  HeifBrand
-  HeifReader
-  HeifColorPrimaries
-  HeifTransferCharacteristics
-  HeifMatrixCoefficients
-  HeifColorProfileNclx
-  HeifCompressionFormat
-  HeifChroma
-  HeifColorspace
-  HeifChannel
-  HeifProgressStep
-  HeifDecodingOptions
-  HeifContext
-}
-...
 `
