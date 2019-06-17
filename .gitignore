@@ -1,0 +1,8 @@
+bin
+obj
+.vs
+*.user
+Debug
+Release
+src/libde265/code
+src/libheif/code

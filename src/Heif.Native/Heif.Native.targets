@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <NativeFiles Include="$(TargetDir)\$(TargetName).dll" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(NativeFiles)" DestinationFolder="$(SolutionDir)\tests\Heif.Tests\bin\x64\$(Configuration)\netcoreapp2.0" />
+  </Target>
+</Project>
