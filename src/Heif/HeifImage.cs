@@ -91,6 +91,40 @@ namespace Heif
         }
 
         /// <summary>
+        /// Returns a byte array of the Y, Cb and Cr channels for each pixel in the image.
+        /// </summary>
+        /// <returns>A byte array of the Y, Cb and Cr channels.</returns>
+        public unsafe byte[] ToYCbCrByteArray()
+        {
+            var data = new byte[this.Metadata.Width * this.Metadata.Height * 3];
+
+            var planeY = this.GetPlane(HeifChannel.Y);
+            var planeCb = this.GetPlane(HeifChannel.Cb);
+            var planeCr = this.GetPlane(HeifChannel.Cr);
+
+            byte* pY = (byte*)planeY.Data;
+            byte* pCb = (byte*)planeCb.Data;
+            byte* pCr = (byte*)planeCr.Data;
+
+            fixed (byte* pData = data)
+            {
+                byte* ptr = pData;
+
+                for (var y = 0; y < this.Metadata.Height; y++)
+                {
+                    for (var x = 0; x < this.Metadata.Width; x++)
+                    {
+                        *ptr++ = *(pY + ((y * planeY.Stride) + x));
+                        *ptr++ = *(pCb + (((y / 2) * planeCb.Stride) + (x / 2)));
+                        *ptr++ = *(pCr + (((y / 2) * planeCr.Stride) + (x / 2)));
+                    }
+                }
+            }
+
+            return data;
+        }
+
+        /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
         public void Dispose()
