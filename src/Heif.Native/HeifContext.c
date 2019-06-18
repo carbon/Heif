@@ -1,3 +1,6 @@
+// Copyright (c) Carbon and contributors.
+// Licensed under the MIT License.
+
 #include "Stdafx.h"
 
 HEIF_NATIVE_EXPORT struct heif_context *HeifContext_Create(const unsigned char *file_data, size_t length)

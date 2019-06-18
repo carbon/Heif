@@ -1,3 +1,6 @@
+// Copyright (c) Carbon and contributors.
+// Licensed under the MIT License.
+
 #pragma once
 
 #define LIBHEIF_STATIC_BUILD

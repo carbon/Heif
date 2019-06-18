@@ -1,3 +1,6 @@
+// Copyright (c) Carbon and contributors.
+// Licensed under the MIT License.
+
 #include "Stdafx.h"
 
 HEIF_NATIVE_EXPORT struct heif_image_handle *HeifImageHandle_Create(struct heif_context *context)
