@@ -23,12 +23,10 @@ namespace Heif.Tests
             [Fact]
             public void ShouldReturnTheCorrectWidthAndHeight()
             {
-                var data = File.ReadAllBytes("i:/heic/test.heic");
+                var metadata = HeifImage.GetMetadata(TestFiles.Camel);
 
-                var metadata = HeifImage.GetMetadata(data);
-
-                Assert.Equal(3024, metadata.Width);
-                Assert.Equal(4032, metadata.Height);
+                Assert.Equal(1596, metadata.Width);
+                Assert.Equal(1064, metadata.Height);
             }
         }
     }

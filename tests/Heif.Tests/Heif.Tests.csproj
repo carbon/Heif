@@ -24,6 +24,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\*" />
+    <EmbeddedResource Include="images\*" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\Heif\Heif.csproj" />
   </ItemGroup>
 
