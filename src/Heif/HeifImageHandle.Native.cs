@@ -16,13 +16,13 @@ namespace Heif
             public static extern IntPtr HeifImageHandle_Create(IntPtr context);
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern void HeifImageHandle_Dispose(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern int HeifImageHandle_Width(IntPtr instance);
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern int HeifImageHandle_Height(IntPtr instance);
-
-            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
-            public static extern void HeifImageHandle_Dispose(IntPtr instance);
         }
 
         private sealed class NativeHeifImageHandle : NativeInstance
