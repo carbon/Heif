@@ -79,6 +79,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HeifContext.c" />
+    <ClCompile Include="HeifImage.c" />
     <ClCompile Include="HeifImageHandle.c" />
     <ClCompile Include="Stdafx.c">
       <PrecompiledHeader>Create</PrecompiledHeader>

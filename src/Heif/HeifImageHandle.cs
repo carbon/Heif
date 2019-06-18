@@ -16,6 +16,11 @@ namespace Heif
 
         public int Height => this.nativeInstance.Height;
 
+        public HeifMetadata ToMetadata()
+        {
+            return new HeifMetadata(this.Width, this.Height);
+        }
+
         public void Dispose()
         {
             if (this.nativeInstance != null)
@@ -24,6 +29,16 @@ namespace Heif
             }
 
             GC.SuppressFinalize(this);
+        }
+
+        internal static IntPtr GetInstance(HeifImageHandle handle)
+        {
+            if (handle == null)
+            {
+                return IntPtr.Zero;
+            }
+
+            return handle.nativeInstance.Instance;
         }
     }
 }
