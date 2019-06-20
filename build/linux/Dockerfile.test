@@ -1,0 +1,19 @@
+FROM microsoft/dotnet:latest
+
+RUN mkdir /build
+
+RUN mkdir /heif
+
+COPY stylecop.json /heif
+
+COPY src /heif/src
+
+COPY tests /heif/tests
+
+RUN mkdir -p /heif/tests/Heif.Tests/bin/Release/netcoreapp2.0
+
+COPY build/linux/output/Heif.Native.dll.so /heif/tests/Heif.Tests/bin/Release/netcoreapp2.0
+
+COPY /build/linux/test.Heif.sh /build
+
+RUN cd /heif/tests/Heif.Tests; /build/test.Heif.sh

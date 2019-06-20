@@ -2,7 +2,7 @@ bin
 obj
 .vs
 *.user
-Debug
-Release
+build/linux/output
+src/Heif.Native/x64
 src/libde265/code
 src/libheif/code

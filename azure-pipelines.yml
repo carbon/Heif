@@ -1,9 +1,37 @@
 name: $(Date:yyyy.MM.dd.HHmm)
 
+resources:
+  containers:
+  - container: linux
+    image: ubuntu:16.04
+    options: '--name linux -v /usr/bin/docker:/tmp/docker:ro'
+  - container: dotnet
+    image: microsoft/dotnet:latest
+
 jobs:
-- job: dotnet_windows
-  displayName: Windows
+- job: windows
+  displayName: Build and Test Windows
   pool:
     vmImage: vs2017-win2016
   steps:
     - template: build/windows/build.yml
+
+- job: linux
+  displayName: Build Linux
+  pool:
+    vmImage: Ubuntu 16.04
+  container: linux
+  steps:
+    - script: /tmp/docker exec -t -u 0 linux $(Build.SourcesDirectory)/build/linux/install.sudo.sh
+      displayName: Install sudo
+    - template: build/linux/build.yml
+
+- job: test_linux
+  displayName: Test Linux
+  pool:
+    vmImage: Ubuntu 16.04
+  container: dotnet
+  steps:
+    - template: build/linux/test.yml
+  dependsOn:
+  - linux

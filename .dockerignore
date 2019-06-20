@@ -1,0 +1,8 @@
+.vs
+src/Heif/bin
+src/Heif/obj
+src/Heif.Native/x64
+src/libde265/code
+src/libheif/code
+tests/Heif.Tests/bin
+tests/Heif.Tests/obj
