@@ -1,5 +1,7 @@
 bin
 obj
+Debug
+Release
 .vs
 *.user
 build/linux/output
