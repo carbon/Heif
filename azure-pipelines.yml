@@ -35,3 +35,10 @@ jobs:
     - template: build/linux/test.yml
   dependsOn:
   - linux
+
+- job: macos
+  displayName: MacOS
+  pool:
+    vmImage: macOS 10.13
+  steps:
+    - template: build/macos/build.yml

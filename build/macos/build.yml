@@ -1,0 +1,31 @@
+steps:
+
+- script: ./install.dependencies.sh
+  workingDirectory: $(Build.SourcesDirectory)/build/macos
+  displayName: Install dependencies
+
+- script: ./checkout.sh
+  workingDirectory: $(Build.SourcesDirectory)/src/libde265
+  displayName: Checkout libde265
+
+- script: ./checkout.sh
+  workingDirectory: $(Build.SourcesDirectory)/src/libheif
+  displayName: Checkout libheif
+
+- script: $(Build.SourcesDirectory)/build/macos/build.Native.sh
+  workingDirectory: $(Build.SourcesDirectory)/src
+  displayName: Build Native
+
+- script: $(Build.SourcesDirectory)/build/macos/copy.Native.sh $(Build.StagingDirectory)
+  workingDirectory: $(Build.SourcesDirectory)/src/Heif.Native
+  displayName: Copy Native
+
+- script: $(Build.SourcesDirectory)/build/macos/test.Heif.sh
+  workingDirectory: $(Build.SourcesDirectory)/tests/Heif.Tests
+  displayName: Build and test Heif
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.StagingDirectory)
+    artifactName: macos
+  displayName: 'Publish Build Artifacts'
