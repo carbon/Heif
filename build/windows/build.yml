@@ -1,0 +1,31 @@
+steps:
+
+- script: checkout.cmd
+  workingDirectory: $(Build.SourcesDirectory)/src/libde265
+  displayName: Checkout libde265
+
+- script: checkout.cmd
+  workingDirectory: $(Build.SourcesDirectory)/src/libheif
+  displayName: Checkout libheif
+
+- script: install.dependencies.cmd
+  workingDirectory: $(Build.SourcesDirectory)/build/windows
+  displayName: Install dependencies
+
+- script: build.Heif.cmd
+  workingDirectory: $(Build.SourcesDirectory)/build/windows
+  displayName: Build Heif
+
+- script: test.Heif.cmd
+  workingDirectory: $(Build.SourcesDirectory)/build/windows
+  displayName: Test Heif
+
+- script: copy.Heif.cmd "$(Build.StagingDirectory)"
+  workingDirectory: $(Build.SourcesDirectory)/build/windows
+  displayName: Copy Heif
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.StagingDirectory)
+    artifactName: windows
+  displayName: 'Publish Build Artifacts'

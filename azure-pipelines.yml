@@ -1,0 +1,9 @@
+name: $(Date:yyyy.MM.dd.HHmm)
+
+jobs:
+- job: dotnet_windows
+  displayName: Windows
+  pool:
+    vmImage: vs2017-win2016
+  steps:
+    - template: build/windows/build.yml
