@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.5">
+    <id>Heif</id>
+    <version>1.0.0</version>
+    <title>Heif</title>
+    <authors>Carbon and contributors</authors>
+    <owners>Carbon and contributors</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/carbon/Heif</projectUrl>
+    <iconUrl>https://avatars1.githubusercontent.com/u/2036072?s=200</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Heif</description>
+    <summary>Heif</summary>
+    <copyright>Copyright (c) Carbon and contributors.</copyright>
+    <tags>Heif</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="windows\Heif.dll" target="lib\netstandard2.0"/>
+    <file src="windows\Heif.Native.dll" target="runtimes\win-x64"/>
+    <file src="linux\Heif.Native.dll.so" target="runtimes\linux-x64"/>
+    <file src="macos\Heif.Native.dll.dylib" target="runtimes\osx-x64"/>
+  </files>
+</package>

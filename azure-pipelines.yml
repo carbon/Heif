@@ -37,8 +37,19 @@ jobs:
   - linux
 
 - job: macos
-  displayName: MacOS
+  displayName: Build and Test MacOS
   pool:
     vmImage: macOS 10.13
   steps:
     - template: build/macos/build.yml
+
+- job: publish
+  displayName: Publish NuGet package
+  pool:
+    vmImage: vs2017-win2016
+  steps:
+    - template: publish/publish.yml
+  dependsOn:
+  - windows
+  - macos
+  - test_linux
