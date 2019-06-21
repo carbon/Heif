@@ -7,6 +7,8 @@ namespace Heif.Tests
 {
     public static class TestFiles
     {
+        public static byte[] C034 => LoadEmbeddedImage("C034.heic");
+
         public static byte[] Camel => LoadEmbeddedImage("camel.heic");
 
         private static byte[] LoadEmbeddedImage(string fileName)

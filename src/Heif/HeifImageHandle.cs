@@ -31,6 +31,24 @@ namespace Heif
             GC.SuppressFinalize(this);
         }
 
+        public byte[] GetExifProfile()
+        {
+            this.nativeInstance.GetExifProfileInfo(out uint exifId, out uint size);
+            if (size == 0)
+            {
+                return null;
+            }
+
+            var result = new byte[size];
+
+            if (!this.nativeInstance.GetExifProfileData(exifId, result))
+            {
+                return null;
+            }
+
+            return result;
+        }
+
         internal static IntPtr GetInstance(HeifImageHandle handle)
         {
             if (handle == null)

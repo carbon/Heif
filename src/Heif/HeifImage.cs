@@ -79,6 +79,15 @@ namespace Heif
         }
 
         /// <summary>
+        /// Returns the exif profile of the image.
+        /// </summary>
+        /// <returns>The exif profile of the image.</returns>
+        public byte[] GetExifProfile()
+        {
+            return this.handle.GetExifProfile();
+        }
+
+        /// <summary>
         /// Returns the plane for the specified channel.
         /// </summary>
         /// <param name="channel">The channel to get the plane for.</param>

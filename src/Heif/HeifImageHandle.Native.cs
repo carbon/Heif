@@ -23,6 +23,12 @@ namespace Heif
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern int HeifImageHandle_Height(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern void HeifImageHandle_GetExifProfileInfo(IntPtr instance, out uint exif_id, out uint size);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern int HeifImageHandle_GetExifProfileData(IntPtr instance, uint exif_id, byte[] data);
         }
 
         private sealed class NativeHeifImageHandle : NativeInstance
@@ -43,6 +49,17 @@ namespace Heif
             public int Height => NativeMethods.HeifImageHandle_Height(this.Instance);
 
             protected override string TypeName => nameof(HeifImageHandle);
+
+            public void GetExifProfileInfo(out uint exifId, out uint size)
+            {
+                NativeMethods.HeifImageHandle_GetExifProfileInfo(this.Instance, out exifId, out size);
+            }
+
+            public unsafe bool GetExifProfileData(uint exifId, byte[] data)
+            {
+                var result = NativeMethods.HeifImageHandle_GetExifProfileData(this.Instance, exifId, data);
+                return result == 0;
+            }
 
             protected override void Dispose(IntPtr instance)
             {
