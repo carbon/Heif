@@ -14,7 +14,7 @@ namespace Heif
         {
             this.dataPointer = GCHandle.Alloc(data, GCHandleType.Pinned);
 
-            this.nativeInstance = new NativeHeifContext(this.dataPointer.AddrOfPinnedObject(), data.Length);
+            this.nativeInstance = new NativeHeifContext(this.dataPointer.AddrOfPinnedObject(), (uint)data.Length);
         }
 
         public void Dispose()

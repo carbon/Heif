@@ -13,7 +13,7 @@ namespace Heif
         private static class NativeMethods
         {
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
-            public static extern IntPtr HeifContext_Create(IntPtr file_data, UIntPtr size);
+            public static extern IntPtr HeifContext_Create(IntPtr file_data, uint size);
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern void HeifContext_Dispose(IntPtr instance);
@@ -21,9 +21,9 @@ namespace Heif
 
         private sealed class NativeHeifContext : NativeInstance
         {
-            public NativeHeifContext(IntPtr file_data, int size)
+            public NativeHeifContext(IntPtr file_data, uint size)
             {
-                var instance = NativeMethods.HeifContext_Create(file_data, (UIntPtr)size);
+                var instance = NativeMethods.HeifContext_Create(file_data, size);
                 if (instance == IntPtr.Zero)
                 {
                     throw new HeifException("Unable to create heif context.");
