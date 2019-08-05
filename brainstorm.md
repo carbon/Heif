@@ -5,8 +5,6 @@ Build Native DLL (with script) of libheif + libde265
 
 Psedo API for brainstorming.
 
-$2,500 USD sponsorship.
-
 
 ```csharp
 public static class Hief 
