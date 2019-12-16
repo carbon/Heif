@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Carbon and contributors.
 // Licensed under the MIT License.
 
-using System.IO;
 using Xunit;
 
 namespace Heif.Tests
