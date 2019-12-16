@@ -38,7 +38,7 @@ HEIF_NATIVE_EXPORT heif_item_id *HeifContext_GetImageIds(struct heif_context *in
   return image_ids;
 }
 
-HEIF_NATIVE_EXPORT heif_item_id *HeifContext_GetImageId(heif_item_id *imageIDs, int offset)
+HEIF_NATIVE_EXPORT heif_item_id HeifContext_GetImageId(heif_item_id *imageIDs, int offset)
 {
   return *(imageIDs + offset);
 }

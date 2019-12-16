@@ -6,7 +6,7 @@
 #define LIBHEIF_STATIC_BUILD
 
 #include <libheif/heif.h>
-#include <malloc.h>
+#include <stdlib.h>
 
 #if defined(HEIF_NATIVE_WINDOWS)
 
