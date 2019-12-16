@@ -10,13 +10,18 @@ namespace Heif
     internal sealed partial class HeifContext : IDisposable
     {
         private GCHandle dataPointer;
+        private int referenceCount;
 
         public HeifContext(byte[] data)
         {
             this.dataPointer = GCHandle.Alloc(data, GCHandleType.Pinned);
 
             this.nativeInstance = new NativeHeifContext(this.dataPointer.AddrOfPinnedObject(), (uint)data.Length);
+
+            this.referenceCount = 1;
         }
+
+        public void AddReference() => this.referenceCount++;
 
         public IEnumerable<uint> GetImageIds()
         {
@@ -40,6 +45,11 @@ namespace Heif
 
         public void Dispose()
         {
+            if (--this.referenceCount != 0)
+            {
+                return;
+            }
+
             if (this.nativeInstance != null)
             {
                 this.nativeInstance.Dispose();

@@ -64,6 +64,48 @@ namespace Heif
         }
 
         /// <summary>
+        /// Creates a new collection of <see cref="HeifImage"/> from the specified data.
+        /// </summary>
+        /// <param name="input">The data to load the image from.</param>
+        /// <returns>A new <see cref="HeifImage"/> instance.</returns>
+        public static IHeifImageCollection DecodeCollection(byte[] input)
+        {
+            var result = new HeifImageCollection();
+
+            HeifImageHandle handle = null;
+
+            try
+            {
+                using (var context = new HeifContext(input))
+                {
+                    foreach (var imageId in context.GetImageIds())
+                    {
+                        handle = new HeifImageHandle(context, imageId);
+
+                        var metadata = handle.ToMetadata();
+                        result.Add(new HeifImage(context, handle, metadata));
+                    }
+                }
+            }
+            catch
+            {
+                foreach (var image in result)
+                {
+                    image.Dispose();
+                }
+
+                if (handle != null)
+                {
+                    handle.Dispose();
+                }
+
+                throw;
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Creates a new <see cref="HeifMetadata"/> from the specified data.
         /// </summary>
         /// <param name="input">The data to load the metadata from.</param>
