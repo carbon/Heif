@@ -30,7 +30,7 @@ namespace Heif
         /// <summary>
         /// Creates a new <see cref="HeifImage"/> from the specified data.
         /// </summary>
-        /// <param name="input">The data to load the metadata from.</param>
+        /// <param name="input">The data to load the image from.</param>
         /// <returns>A new <see cref="HeifImage"/> instance.</returns>
         public static HeifImage Decode(byte[] input)
         {
