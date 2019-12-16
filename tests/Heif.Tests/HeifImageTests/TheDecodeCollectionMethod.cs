@@ -7,14 +7,14 @@ namespace Heif.Tests
 {
     public partial class HeifImageTests
     {
-        public class TheDecodeMethod
+        public class TheDecodeCollectionMethod
         {
             [Fact]
             public void ShouldThrowExceptionWhenFileIsInvalid()
             {
                 var data = new byte[] { 42 };
 
-                var exception = Assert.Throws<HeifException>(() => HeifImage.Decode(data));
+                var exception = Assert.Throws<HeifException>(() => HeifImage.DecodeCollection(data));
 
                 Assert.Equal("Unable to create heif context.", exception.Message);
             }
@@ -22,10 +22,15 @@ namespace Heif.Tests
             [Fact]
             public void ShouldLoadTheMetadata()
             {
-                using (var image = HeifImage.Decode(TestFiles.Camel))
+                using (var images = HeifImage.DecodeCollection(TestFiles.Collection))
                 {
-                    Assert.Equal(1596, image.Metadata.Width);
-                    Assert.Equal(1064, image.Metadata.Height);
+                    Assert.Equal(4, images.Count);
+
+                    foreach (var image in images)
+                    {
+                        Assert.Equal(1280, image.Metadata.Width);
+                        Assert.Equal(720, image.Metadata.Height);
+                    }
                 }
             }
         }

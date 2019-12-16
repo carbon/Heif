@@ -11,6 +11,8 @@ namespace Heif.Tests
 
         public static byte[] Camel => LoadEmbeddedImage("camel.heic");
 
+        public static byte[] Collection => LoadEmbeddedImage("collection.heic");
+
         private static byte[] LoadEmbeddedImage(string fileName)
         {
             var assembly = typeof(TestFiles).Assembly;

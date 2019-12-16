@@ -5,6 +5,7 @@ Release
 .vs
 *.user
 build/linux/output
+build/windows/nuget.exe
 src/Heif.Native/x64
 src/libde265/code
 src/libheif/code

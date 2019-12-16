@@ -16,6 +16,9 @@ namespace Heif
             public static extern IntPtr HeifImageHandle_Create(IntPtr context);
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern IntPtr HeifImageHandle_CreateById(IntPtr context, uint image_id);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern void HeifImageHandle_Dispose(IntPtr instance);
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
@@ -44,16 +47,24 @@ namespace Heif
                 this.Instance = instance;
             }
 
+            public NativeHeifImageHandle(HeifContext context, uint imageId)
+            {
+                var instance = NativeMethods.HeifImageHandle_CreateById(HeifContext.GetInstance(context), imageId);
+                if (instance == IntPtr.Zero)
+                {
+                    throw new HeifException("Unable to load heif image handle.");
+                }
+
+                this.Instance = instance;
+            }
+
             public int Width => NativeMethods.HeifImageHandle_Width(this.Instance);
 
             public int Height => NativeMethods.HeifImageHandle_Height(this.Instance);
 
             protected override string TypeName => nameof(HeifImageHandle);
 
-            public void GetExifProfileInfo(out uint exifId, out uint size)
-            {
-                NativeMethods.HeifImageHandle_GetExifProfileInfo(this.Instance, out exifId, out size);
-            }
+            public void GetExifProfileInfo(out uint exifId, out uint size) => NativeMethods.HeifImageHandle_GetExifProfileInfo(this.Instance, out exifId, out size);
 
             public unsafe bool GetExifProfileData(uint exifId, byte[] data)
             {

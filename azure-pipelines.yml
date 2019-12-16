@@ -12,7 +12,7 @@ jobs:
 - job: windows
   displayName: Build and Test Windows
   pool:
-    vmImage: vs2017-win2016
+    vmImage: windows-2019
   steps:
     - template: build/windows/build.yml
 
