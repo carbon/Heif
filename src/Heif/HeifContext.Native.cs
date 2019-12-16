@@ -17,6 +17,15 @@ namespace Heif
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern void HeifContext_Dispose(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern IntPtr HeifContext_GetImageIds(IntPtr instance, out uint count);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern uint HeifContext_GetImageId(IntPtr imageIDs, int offset);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern void HeifContext_DisposeImageIds(IntPtr imageIDs);
         }
 
         private sealed class NativeHeifContext : NativeInstance
@@ -33,6 +42,12 @@ namespace Heif
             }
 
             protected override string TypeName => nameof(HeifContext);
+
+            public IntPtr GetImageIds(out uint count) => NativeMethods.HeifContext_GetImageIds(this.Instance, out count);
+
+            public uint GetImageId(IntPtr imageIDs, int offset) => NativeMethods.HeifContext_GetImageId(imageIDs, offset);
+
+            public void DisposeImageIds(IntPtr imageIDs) => NativeMethods.HeifContext_DisposeImageIds(imageIDs);
 
             protected override void Dispose(IntPtr instance)
             {

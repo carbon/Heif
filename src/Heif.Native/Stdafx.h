@@ -6,8 +6,9 @@
 #define LIBHEIF_STATIC_BUILD
 
 #include <libheif/heif.h>
+#include <malloc.h>
 
-#if defined(HEIF_NATIVE_WINDOWS) 
+#if defined(HEIF_NATIVE_WINDOWS)
 
 __pragma(comment(lib, "libde265.lib"))
 __pragma(comment(lib, "libheif.lib"))

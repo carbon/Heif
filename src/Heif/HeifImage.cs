@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System;
+using System.Collections.Generic;
 
 namespace Heif
 {
@@ -75,6 +76,28 @@ namespace Heif
                 {
                     return handle.ToMetadata();
                 }
+            }
+        }
+
+        /// <summary>
+        /// Creates a new collection of <see cref="HeifMetadata"/> from the specified data.
+        /// </summary>
+        /// <param name="input">The data to load the metadata from.</param>
+        /// <returns>A new <see cref="HeifMetadata"/>.</returns>
+        public static IReadOnlyCollection<HeifMetadata> GetCollectionMetadata(byte[] input)
+        {
+            using (var context = new HeifContext(input))
+            {
+                var result = new List<HeifMetadata>();
+                foreach (var imageId in context.GetImageIds())
+                {
+                    using (var handle = new HeifImageHandle(context, imageId))
+                    {
+                        result.Add(handle.ToMetadata());
+                    }
+                }
+
+                return result;
             }
         }
 

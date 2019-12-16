@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace Heif
@@ -15,6 +16,26 @@ namespace Heif
             this.dataPointer = GCHandle.Alloc(data, GCHandleType.Pinned);
 
             this.nativeInstance = new NativeHeifContext(this.dataPointer.AddrOfPinnedObject(), (uint)data.Length);
+        }
+
+        public IEnumerable<uint> GetImageIds()
+        {
+            var imageIds = IntPtr.Zero;
+            try
+            {
+                imageIds = this.nativeInstance.GetImageIds(out var count);
+                for (var offset = 0; offset < count; offset++)
+                {
+                    yield return this.nativeInstance.GetImageId(imageIds, offset);
+                }
+            }
+            finally
+            {
+                if (imageIds != IntPtr.Zero)
+                {
+                    this.nativeInstance.DisposeImageIds(imageIds);
+                }
+            }
         }
 
         public void Dispose()
