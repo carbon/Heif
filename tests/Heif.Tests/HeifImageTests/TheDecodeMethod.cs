@@ -10,6 +10,16 @@ namespace Heif.Tests
         public class TheDecodeMethod
         {
             [Fact]
+            public void ShouldThrowExceptionWhenFileIsInvalid()
+            {
+                var data = new byte[] { 42 };
+
+                var exception = Assert.Throws<HeifException>(() => HeifImage.Decode(data));
+
+                Assert.Equal("Unable to create heif context.", exception.Message);
+            }
+
+            [Fact]
             public void ShouldLoadTheMetadata()
             {
                 using (var image = HeifImage.Decode(TestFiles.Camel))
