@@ -3,13 +3,26 @@
 
 #include "Stdafx.h"
 
+HEIF_NATIVE_EXPORT struct heif_image_handle *HeifImageHandle_CreateById(struct heif_context *context, heif_item_id image_id)
+{
+  struct heif_image_handle
+    *image_handle;
+
+  struct heif_error
+    error;
+
+  error = heif_context_get_image_handle(context, image_id, &image_handle);
+
+  if (error.code != 0)
+    return (struct heif_image_handle *) NULL;
+
+  return image_handle;
+}
+
 HEIF_NATIVE_EXPORT struct heif_image_handle *HeifImageHandle_Create(struct heif_context *context)
 {
   heif_item_id
     primary_image_id;
-
-  struct heif_image_handle
-    *image_handle;
 
   struct heif_error
     error;
@@ -18,12 +31,7 @@ HEIF_NATIVE_EXPORT struct heif_image_handle *HeifImageHandle_Create(struct heif_
   if (error.code != 0)
     return (struct heif_image_handle *) NULL;
 
-  error = heif_context_get_image_handle(context, primary_image_id, &image_handle);
-
-  if (error.code != 0)
-    return (struct heif_image_handle *) NULL;
-
-  return image_handle;
+  return HeifImageHandle_CreateById(context, primary_image_id);
 }
 
 HEIF_NATIVE_EXPORT void HeifImageHandle_Dispose(struct heif_image_handle *image_handle)

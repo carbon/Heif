@@ -12,6 +12,11 @@ namespace Heif
             this.nativeInstance = new NativeHeifImageHandle(context);
         }
 
+        public HeifImageHandle(HeifContext context, uint imageId)
+        {
+            this.nativeInstance = new NativeHeifImageHandle(context, imageId);
+        }
+
         public int Width => this.nativeInstance.Width;
 
         public int Height => this.nativeInstance.Height;
