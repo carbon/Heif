@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.705
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Heif.Native", "src\Heif.Native\Heif.Native.vcxproj", "{F352202A-70F8-4D52-894D-9EF61C391EE3}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -34,6 +34,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{148DECE0-729A-4A67-A584-FE0D604BBF74}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heif.Tests", "tests\Heif.Tests\Heif.Tests.csproj", "{0A5E9233-A2C6-4D81-9BFD-A6D93CEB4B85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{61391E04-05F0-4A76-9572-8FA0FF212FD0}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\master.yml = .github\workflows\master.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

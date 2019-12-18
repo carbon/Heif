@@ -1,0 +1,203 @@
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+name: master
+jobs:
+
+  linux:
+    name: Build Linux
+    container:
+      image: ubuntu:xenial
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Install dependencies
+      run: ./install.dependencies.sh
+      working-directory: build/linux
+
+    - name: Checkout libde265
+      run: ./checkout.sh
+      working-directory: src/libde265
+
+    - name: Checkout libheif
+      run: ./checkout.sh
+      working-directory: src/libheif
+
+    - name: Build Native
+      run: ../build/linux/build.Native.sh
+      working-directory: src
+
+    - name: Copy Native
+      run: ../../build/linux/copy.Native.sh ../../artifacts
+      working-directory: src/Heif.Native
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v1
+      with:
+          name: linux
+          path: artifacts
+
+  test_linux:
+    name: Test Linux
+    needs: linux
+    container:
+      image: microsoft/dotnet:latest
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Download artifacts
+      uses: actions/download-artifact@v1
+      with:
+          name: linux
+
+    - name: Copy linux library
+      run: |
+        mkdir -p tests/Heif.Tests/bin/Release/netcoreapp2.0
+        cp linux/* tests/Heif.Tests/bin/Release/netcoreapp2.0
+
+    - name: Build and test Heif
+      run: ../../build/linux/test.Heif.sh
+      working-directory: tests/Heif.Tests
+
+  macos:
+    name: Build and Test MacOS
+    runs-on: macos-latest
+
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Install dependencies
+      run: ./install.dependencies.sh
+      working-directory: build/macos
+
+    - name: Checkout libde265
+      run: ./checkout.sh
+      working-directory: src/libde265
+
+    - name: Checkout libheif
+      run: ./checkout.sh
+      working-directory: src/libheif
+
+    - name: Build Native
+      run: ../build/macos/build.Native.sh
+      working-directory: src
+
+    - name: Copy Native
+      run: ../../build/macos/copy.Native.sh ../../artifacts
+      working-directory: src/Heif.Native
+
+    - name: Build and test Heif
+      run: ../../build/macos/test.Heif.sh
+      working-directory: tests/Heif.Tests
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v1
+      with:
+          name: macos
+          path: artifacts
+
+  windows:
+    name: Build and Test Windows
+    runs-on: windows-latest
+
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Install dependencies
+      run: ./install.dependencies.cmd
+      working-directory: build/windows
+
+    - name: Checkout libde265
+      run: ./checkout.cmd
+      working-directory: src/libde265
+
+    - name: Checkout libheif
+      run: ./checkout.cmd
+      working-directory: src/libheif
+
+    - name: Build Heif
+      run: ./build.Heif.cmd
+      working-directory: build/windows
+
+    - name: Test Heif
+      run: ./test.Heif.cmd
+      working-directory: build/windows
+      
+    - name: Copy Heif
+      run: ./copy.Heif.cmd ../../artifacts
+      working-directory: build/windows
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v1
+      with:
+          name: windows
+          path: artifacts
+
+  publish:
+    name: Publish NuGet package
+    needs:
+      - test_linux
+      - macos
+      - windows
+    runs-on: windows-latest
+
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Install dependencies
+      run: ./install.dependencies.cmd
+      working-directory: build/windows
+
+    - name: Download linux artifacts
+      uses: actions/download-artifact@v1
+      with:
+          name: linux
+          path: publish\linux
+
+    - name: Download macos artifacts
+      uses: actions/download-artifact@v1
+      with:
+          name: macos
+          path: publish\macos
+
+    - name: Download windows artifacts
+      uses: actions/download-artifact@v1
+      with:
+          name: windows
+          path: publish\windows
+
+    - name: Create NuGet package
+      working-directory: publish
+      run: |
+        mkdir output
+        ..\build\windows\nuget.exe pack Heif.nuspec -OutputDirectory output
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v1
+      with:
+          name: package
+          path: publish/output
