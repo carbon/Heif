@@ -40,6 +40,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{61391E04
 		.github\workflows\master.yml = .github\workflows\master.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{81810834-CDCE-4C7F-A723-9003BBD0B35C}"
+	ProjectSection(SolutionItems) = preProject
+		publish\Heif.nuspec = publish\Heif.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
