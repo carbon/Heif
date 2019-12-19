@@ -194,7 +194,7 @@ jobs:
       working-directory: publish
       run: |
         mkdir output
-        ..\build\windows\nuget.exe pack Heif.nuspec -OutputDirectory output
+        ..\build\windows\nuget.exe pack Carbon.Heif.nuspec -OutputDirectory output
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v1
