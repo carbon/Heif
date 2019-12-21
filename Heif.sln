@@ -45,6 +45,51 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{8181
 		publish\Heif.nuspec = publish\Heif.nuspec
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linux", "linux", "{285A2DE9-76D3-4278-979B-E8E22CDC657A}"
+	ProjectSection(SolutionItems) = preProject
+		build\linux\build.cmd = build\linux\build.cmd
+		build\linux\build.Native.sh = build\linux\build.Native.sh
+		build\linux\copy.Native.sh = build\linux\copy.Native.sh
+		build\linux\Dockerfile.build = build\linux\Dockerfile.build
+		build\linux\Dockerfile.test = build\linux\Dockerfile.test
+		build\linux\install.dependencies.sh = build\linux\install.dependencies.sh
+		build\linux\run.build.cmd = build\linux\run.build.cmd
+		build\linux\run.test.cmd = build\linux\run.test.cmd
+		build\linux\test.cmd = build\linux\test.cmd
+		build\linux\test.Heif.sh = build\linux\test.Heif.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libheif", "libheif", "{3AC47A0C-945B-4CCF-AADD-7A935A8660EA}"
+	ProjectSection(SolutionItems) = preProject
+		src\libheif\checkout.sh = src\libheif\checkout.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libde265", "libde265", "{59F7C753-FB0B-494D-A345-64EC1A1E8DC3}"
+	ProjectSection(SolutionItems) = preProject
+		src\libde265\checkout.sh = src\libde265\checkout.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "macos", "macos", "{A6C49757-21E6-4D56-8811-1A36650EDE7E}"
+	ProjectSection(SolutionItems) = preProject
+		build\macos\build.Native.sh = build\macos\build.Native.sh
+		build\macos\copy.Native.sh = build\macos\copy.Native.sh
+		build\macos\install.dependencies.sh = build\macos\install.dependencies.sh
+		build\macos\test.Heif.sh = build\macos\test.Heif.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "windows", "windows", "{A9577755-A819-420B-9BBC-A8B63B2A8B16}"
+	ProjectSection(SolutionItems) = preProject
+		build\windows\build.Heif.cmd = build\windows\build.Heif.cmd
+		build\windows\build.Heif.ps1 = build\windows\build.Heif.ps1
+		build\windows\copy.Heif.cmd = build\windows\copy.Heif.cmd
+		build\windows\init.visualstudio.cmd = build\windows\init.visualstudio.cmd
+		build\windows\install.dependencies.cmd = build\windows\install.dependencies.cmd
+		build\windows\install.dependencies.ps1 = build\windows\install.dependencies.ps1
+		build\windows\test.Heif.cmd = build\windows\test.Heif.cmd
+		build\windows\test.Heif.ps1 = build\windows\test.Heif.ps1
+		build\windows\utils.ps1 = build\windows\utils.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +146,11 @@ Global
 		{29BC817A-6CCA-3E81-85DB-237302ED01F9} = {100BC26B-011C-451B-8AAE-41C37E82543B}
 		{2A7EB5D7-6507-4A4E-8348-2D256D7408A1} = {F891C3F1-995A-471C-B5F1-09BAA97DC86C}
 		{0A5E9233-A2C6-4D81-9BFD-A6D93CEB4B85} = {148DECE0-729A-4A67-A584-FE0D604BBF74}
+		{285A2DE9-76D3-4278-979B-E8E22CDC657A} = {61391E04-05F0-4A76-9572-8FA0FF212FD0}
+		{3AC47A0C-945B-4CCF-AADD-7A935A8660EA} = {F891C3F1-995A-471C-B5F1-09BAA97DC86C}
+		{59F7C753-FB0B-494D-A345-64EC1A1E8DC3} = {F891C3F1-995A-471C-B5F1-09BAA97DC86C}
+		{A6C49757-21E6-4D56-8811-1A36650EDE7E} = {61391E04-05F0-4A76-9572-8FA0FF212FD0}
+		{A9577755-A819-420B-9BBC-A8B63B2A8B16} = {61391E04-05F0-4A76-9572-8FA0FF212FD0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A1CBF1F-6BF1-31B9-B459-7695CFCBA794}
