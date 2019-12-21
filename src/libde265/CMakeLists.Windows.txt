@@ -81,7 +81,7 @@ if(MSVC)
   )
 endif()
 
-add_definitions(-DLIBDE265_EXPORTS)
+add_definitions(-DLIBDE265_STATIC_BUILD)
 
 add_subdirectory (encoder)
 
@@ -90,7 +90,7 @@ if(SUPPORTS_SSE4_1)
   add_subdirectory (x86)
 endif()
 
-add_library(${PROJECT_NAME} SHARED ${libde265_sources} ${ENCODER_OBJECTS} ${X86_OBJECTS})
+add_library(${PROJECT_NAME} STATIC ${libde265_sources} ${ENCODER_OBJECTS} ${X86_OBJECTS})
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
 
 write_basic_package_version_file(${PROJECT_NAME}ConfigVersion.cmake COMPATIBILITY ExactVersion)
