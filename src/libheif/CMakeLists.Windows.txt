@@ -24,7 +24,7 @@ set(libheif_headers
     ${PROJECT_BINARY_DIR}/libheif/heif_version.h
 )
 
-add_library(${PROJECT_NAME}
+add_library(${PROJECT_NAME} STATIC
     bitstream.cc
     box.cc
     error.cc
@@ -51,7 +51,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 target_compile_definitions(${PROJECT_NAME}
     PUBLIC 
-        LIBHEIF_EXPORTS
+        LIBDE265_STATIC_BUILD
+        LIBHEIF_STATIC_BUILD
         HAVE_VISIBILITY
 )
 
