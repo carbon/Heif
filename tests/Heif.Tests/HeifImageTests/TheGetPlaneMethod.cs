@@ -11,9 +11,9 @@ namespace Heif.Tests
         public class TheGetPlaneMethod
         {
             [Theory]
-            [InlineData(HeifChannel.Y, 1596)]
-            [InlineData(HeifChannel.Cb, 798)]
-            [InlineData(HeifChannel.Cr, 798)]
+            [InlineData(HeifChannel.Y, 1600)]
+            [InlineData(HeifChannel.Cb, 800)]
+            [InlineData(HeifChannel.Cr, 800)]
             public void ShouldReturnThePlane(HeifChannel channel, int stride)
             {
                 using (var image = HeifImage.Decode(TestFiles.Camel))
