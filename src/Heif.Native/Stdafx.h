@@ -11,7 +11,7 @@
 #if defined(HEIF_NATIVE_WINDOWS)
 
 __pragma(comment(lib, "libde265.lib"))
-__pragma(comment(lib, "libheif.lib"))
+__pragma(comment(lib, "heif.lib"))
 
 #define HEIF_NATIVE_EXPORT __declspec(dllexport)
 

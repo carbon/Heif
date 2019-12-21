@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "x86", "src\libde265\code\li
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "x86_sse", "src\libde265\code\libde265\x86\x86_sse.vcxproj", "{830F8B4E-0161-34C4-A07F-AC877C14894C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libheif", "src\libheif\code\libheif\libheif.vcxproj", "{20D3CF00-DC8C-3283-925F-A03028B4995B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libheif", "src\libheif\code\libheif\heif.vcxproj", "{20D3CF00-DC8C-3283-925F-A03028B4995B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{EDECD5E6-7F6D-33CD-A7A5-870566FE56EC} = {EDECD5E6-7F6D-33CD-A7A5-870566FE56EC}
 	EndProjectSection
@@ -61,11 +61,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linux", "linux", "{285A2DE9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libheif", "libheif", "{3AC47A0C-945B-4CCF-AADD-7A935A8660EA}"
 	ProjectSection(SolutionItems) = preProject
+		src\libheif\checkout.cmd = src\libheif\checkout.cmd
 		src\libheif\checkout.sh = src\libheif\checkout.sh
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libde265", "libde265", "{59F7C753-FB0B-494D-A345-64EC1A1E8DC3}"
 	ProjectSection(SolutionItems) = preProject
+		src\libde265\checkout.cmd = src\libde265\checkout.cmd
 		src\libde265\checkout.sh = src\libde265\checkout.sh
 	EndProjectSection
 EndProject
