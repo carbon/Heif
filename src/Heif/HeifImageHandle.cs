@@ -29,15 +29,12 @@ namespace Heif
 
         public void Dispose()
         {
-            if (this.nativeInstance != null)
-            {
-                this.nativeInstance.Dispose();
-            }
+            this.nativeInstance?.Dispose();
 
             GC.SuppressFinalize(this);
         }
 
-        public byte[] GetExifProfile()
+        public byte[]? GetExifProfile()
         {
             this.nativeInstance.GetExifProfileInfo(out uint exifId, out uint size);
             if (size == 0)

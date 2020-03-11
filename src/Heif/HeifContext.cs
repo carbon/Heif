@@ -50,10 +50,7 @@ namespace Heif
                 return;
             }
 
-            if (this.nativeInstance != null)
-            {
-                this.nativeInstance.Dispose();
-            }
+            this.nativeInstance?.Dispose();
 
             if (this.dataPointer.IsAllocated)
             {

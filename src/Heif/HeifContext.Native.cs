@@ -8,7 +8,7 @@ namespace Heif
 {
     internal sealed partial class HeifContext
     {
-        private NativeHeifContext nativeInstance;
+        private readonly NativeHeifContext nativeInstance;
 
         private static class NativeMethods
         {

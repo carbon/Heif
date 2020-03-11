@@ -9,7 +9,7 @@ namespace Heif
     /// <content />
     public sealed partial class HeifImage
     {
-        private NativeHeifImage nativeInstance;
+        private readonly NativeHeifImage nativeInstance;
 
         private static class NativeMethods
         {

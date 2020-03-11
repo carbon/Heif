@@ -8,7 +8,7 @@ namespace Heif
 {
     internal sealed partial class HeifImageHandle
     {
-        private NativeHeifImageHandle nativeInstance;
+        private readonly NativeHeifImageHandle nativeInstance;
 
         private static class NativeMethods
         {

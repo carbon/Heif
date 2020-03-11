@@ -35,8 +35,8 @@ namespace Heif
         /// <returns>A new <see cref="HeifImage"/> instance.</returns>
         public static HeifImage Decode(byte[] input)
         {
-            HeifContext context = null;
-            HeifImageHandle handle = null;
+            HeifContext? context = null;
+            HeifImageHandle? handle = null;
 
             try
             {
@@ -49,15 +49,8 @@ namespace Heif
             }
             catch
             {
-                if (handle != null)
-                {
-                    handle.Dispose();
-                }
-
-                if (context != null)
-                {
-                    context.Dispose();
-                }
+                handle?.Dispose();
+                context?.Dispose();
 
                 throw;
             }
@@ -72,7 +65,7 @@ namespace Heif
         {
             var result = new HeifImageCollection();
 
-            HeifImageHandle handle = null;
+            HeifImageHandle? handle = null;
 
             try
             {
@@ -94,10 +87,7 @@ namespace Heif
                     image.Dispose();
                 }
 
-                if (handle != null)
-                {
-                    handle.Dispose();
-                }
+                handle?.Dispose();
 
                 throw;
             }
@@ -147,7 +137,7 @@ namespace Heif
         /// Returns the exif profile of the image.
         /// </summary>
         /// <returns>The exif profile of the image.</returns>
-        public byte[] GetExifProfile()
+        public byte[]? GetExifProfile()
         {
             return this.handle.GetExifProfile();
         }
@@ -203,20 +193,9 @@ namespace Heif
         /// </summary>
         public void Dispose()
         {
-            if (this.nativeInstance != null)
-            {
-                this.nativeInstance.Dispose();
-            }
-
-            if (this.handle != null)
-            {
-                this.handle.Dispose();
-            }
-
-            if (this.context != null)
-            {
-                this.context.Dispose();
-            }
+            this.nativeInstance?.Dispose();
+            this.handle?.Dispose();
+            this.context?.Dispose();
 
             GC.SuppressFinalize(this);
         }
