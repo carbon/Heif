@@ -34,11 +34,6 @@ HEIF_NATIVE_EXPORT struct heif_image_handle *HeifImageHandle_Create(struct heif_
   return HeifImageHandle_CreateById(context, primary_image_id);
 }
 
-HEIF_NATIVE_EXPORT void HeifImageHandle_Dispose(struct heif_image_handle *image_handle)
-{
-  heif_image_handle_release(image_handle);
-}
-
 HEIF_NATIVE_EXPORT int HeifImageHandle_Height(struct heif_image_handle *image_handle)
 {
   return heif_image_handle_get_height(image_handle);
@@ -47,6 +42,11 @@ HEIF_NATIVE_EXPORT int HeifImageHandle_Height(struct heif_image_handle *image_ha
 HEIF_NATIVE_EXPORT int HeifImageHandle_Width(struct heif_image_handle *image_handle)
 {
   return heif_image_handle_get_width(image_handle);
+}
+
+HEIF_NATIVE_EXPORT void HeifImageHandle_Dispose(struct heif_image_handle *image_handle)
+{
+  heif_image_handle_release(image_handle);
 }
 
 HEIF_NATIVE_EXPORT void HeifImageHandle_GetExifProfileInfo(struct heif_image_handle *image_handle, heif_item_id *exif_id, size_t *size)
