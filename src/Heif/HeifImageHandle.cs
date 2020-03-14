@@ -22,10 +22,7 @@ namespace Heif
 
         public int Height => this.nativeInstance.Height;
 
-        public HeifMetadata ToMetadata()
-        {
-            return new HeifMetadata(this.Width, this.Height);
-        }
+        public HeifMetadata ToMetadata() => new HeifMetadata(this.Width, this.Height);
 
         public void Dispose()
         {
