@@ -21,6 +21,12 @@ namespace Heif
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern IntPtr HeifImage_GetPlane(IntPtr instance, UIntPtr channel, out UIntPtr stride);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern int HeifImage_Height(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern int HeifImage_Width(IntPtr instance);
         }
 
         private sealed class NativeHeifImage : NativeInstance
@@ -35,6 +41,10 @@ namespace Heif
 
                 this.Instance = instance;
             }
+
+            public int Height => NativeMethods.HeifImage_Height(this.Instance);
+
+            public int Width => NativeMethods.HeifImage_Width(this.Instance);
 
             protected override string TypeName => nameof(HeifImage);
 

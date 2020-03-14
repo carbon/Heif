@@ -14,13 +14,13 @@ namespace Heif
         private readonly HeifContext context;
         private readonly HeifImageHandle handle;
 
-        private HeifImage(HeifContext context, HeifImageHandle handle, HeifMetadata metadata)
+        private HeifImage(HeifContext context, HeifImageHandle handle)
         {
             this.context = context;
             this.handle = handle;
-            this.Metadata = metadata;
-
             this.nativeInstance = new NativeHeifImage(handle);
+
+            this.Metadata = new HeifMetadata(this.nativeInstance.Width, this.nativeInstance.Height);
         }
 
         /// <summary>
@@ -43,9 +43,7 @@ namespace Heif
                 context = new HeifContext(input);
                 handle = new HeifImageHandle(context);
 
-                var metadata = handle.ToMetadata();
-
-                return new HeifImage(context, handle, metadata);
+                return new HeifImage(context, handle);
             }
             catch
             {
@@ -75,8 +73,7 @@ namespace Heif
                     {
                         handle = new HeifImageHandle(context, imageId);
 
-                        var metadata = handle.ToMetadata();
-                        result.Add(new HeifImage(context, handle, metadata));
+                        result.Add(new HeifImage(context, handle));
                     }
                 }
             }

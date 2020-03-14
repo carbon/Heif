@@ -19,6 +19,16 @@ HEIF_NATIVE_EXPORT struct heif_image *HeifImage_Create(struct heif_image_handle 
   return image;
 }
 
+HEIF_NATIVE_EXPORT int HeifImage_Height(struct heif_image *image)
+{
+  return heif_image_get_height(image, heif_channel_Y);
+}
+
+HEIF_NATIVE_EXPORT int HeifImage_Width(struct heif_image *image)
+{
+  return heif_image_get_width(image, heif_channel_Y);
+}
+
 HEIF_NATIVE_EXPORT void HeifImage_Dispose(struct heif_image *image)
 {
   heif_image_release(image);
