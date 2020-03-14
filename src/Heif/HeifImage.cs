@@ -24,6 +24,11 @@ namespace Heif
         }
 
         /// <summary>
+        /// Gets the color profile type.
+        /// </summary>
+        public HeifColorProfileType ColorProfileType => this.nativeInstance.ColorProfileType;
+
+        /// <summary>
         /// Gets the metadata of the image.
         /// </summary>
         public HeifMetadata Metadata { get; }

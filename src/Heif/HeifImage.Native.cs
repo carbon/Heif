@@ -14,6 +14,15 @@ namespace Heif
         private static class NativeMethods
         {
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern uint HeifImage_ColorProfileType(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern int HeifImage_Height(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern int HeifImage_Width(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern IntPtr HeifImage_Create(IntPtr context);
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
@@ -21,12 +30,6 @@ namespace Heif
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern IntPtr HeifImage_GetPlane(IntPtr instance, UIntPtr channel, out UIntPtr stride);
-
-            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
-            public static extern int HeifImage_Height(IntPtr instance);
-
-            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
-            public static extern int HeifImage_Width(IntPtr instance);
         }
 
         private sealed class NativeHeifImage : NativeInstance
@@ -45,6 +48,8 @@ namespace Heif
             public int Height => NativeMethods.HeifImage_Height(this.Instance);
 
             public int Width => NativeMethods.HeifImage_Width(this.Instance);
+
+            public HeifColorProfileType ColorProfileType => (HeifColorProfileType)NativeMethods.HeifImage_ColorProfileType(this.Instance);
 
             protected override string TypeName => nameof(HeifImage);
 
