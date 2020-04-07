@@ -13,6 +13,10 @@ namespace Heif.Tests
 
         public static byte[] Collection => LoadEmbeddedImage("collection.heic");
 
+        public static byte[] Dog => LoadEmbeddedImage("dog.heic"); // XDR
+
+        public static byte[] Computer => LoadEmbeddedImage("computer.heic");
+
         private static byte[] LoadEmbeddedImage(string fileName)
         {
             var assembly = typeof(TestFiles).Assembly;
