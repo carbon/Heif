@@ -11,16 +11,16 @@ namespace Heif
         /// <summary>
         /// Not present
         /// </summary>
-        NotPresent,
+        NotPresent = 0,
 
         /// <summary>
         /// Icc
         /// </summary>
-        Icc,
+        Icc = 1917403971,
 
         /// <summary>
         /// Nclx
         /// </summary>
-        Nclx,
+        Nclx = 1852009592,
     }
 }
