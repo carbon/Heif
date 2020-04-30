@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     /// <summary>
     ///  Represents errors that occur during heif execution.

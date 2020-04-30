@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Carbon and contributors.
 // Licensed under the MIT License.
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     /// <summary>
     /// Class that contains metadata of a heif image.

@@ -3,7 +3,7 @@
 
 using System.IO;
 
-namespace Heif.Tests
+namespace Carbon.Codecs.Heif.Tests
 {
     public static class TestFiles
     {

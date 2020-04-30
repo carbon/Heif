@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Carbon and contributors.
 // Licensed under the MIT License.
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     /// <summary>
     /// Heif channel.

@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     /// <summary>
     /// Representation of a heif image collection.

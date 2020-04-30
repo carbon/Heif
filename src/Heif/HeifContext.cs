@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     internal sealed partial class HeifContext : IDisposable
     {

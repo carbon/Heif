@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     /// <summary>
     /// Representation of a heif plane.

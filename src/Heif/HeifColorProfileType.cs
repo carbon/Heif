@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Carbon and contributors.
 // Licensed under the MIT License.
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     /// <summary>
     /// Heif color profile type.
@@ -11,16 +11,16 @@ namespace Heif
         /// <summary>
         /// Not present
         /// </summary>
-        NotPresent,
+        NotPresent = 0,
 
         /// <summary>
         /// Icc
         /// </summary>
-        Icc,
+        Icc = 1917403971,
 
         /// <summary>
         /// Nclx
         /// </summary>
-        Nclx,
+        Nclx = 1852009592,
     }
 }

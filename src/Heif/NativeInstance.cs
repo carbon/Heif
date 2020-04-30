@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     internal abstract class NativeInstance : IDisposable
     {

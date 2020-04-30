@@ -4,7 +4,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     internal sealed partial class HeifImageHandle
     {

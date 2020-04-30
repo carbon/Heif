@@ -3,7 +3,7 @@
 
 using Xunit;
 
-namespace Heif.Tests
+namespace Carbon.Codecs.Heif.Tests
 {
     public partial class HeifImageTests
     {

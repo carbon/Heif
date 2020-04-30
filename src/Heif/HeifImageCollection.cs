@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace Heif
+namespace Carbon.Codecs.Heif
 {
     internal sealed class HeifImageCollection : List<HeifImage>, IHeifImageCollection
     {
