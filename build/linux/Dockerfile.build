@@ -18,4 +18,4 @@ RUN cd /src; /build/build.Native.sh
 
 COPY /build/linux/copy.Native.sh /build
 
-RUN cd /src/Heif.Native; /build/copy.Native.sh
+RUN cd /src/Carbon.Codecs.Heif.Native; /build/copy.Native.sh

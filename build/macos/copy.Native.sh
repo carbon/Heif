@@ -3,7 +3,7 @@ set -e
 
 [ ! -d "$1" ] && mkdir $1
 
-cp libHeif.Native.dll.dylib $1/Heif.Native.dll.dylib
+cp libCarbon.Codecs.Heif.Native.dll.dylib $1/Carbon.Codecs.Heif.Native.dll.dylib
 
-mkdir -p ../../tests/Heif.Tests/bin/Release/netcoreapp2.0
-cp libHeif.Native.dll.dylib ../../tests/Heif.Tests/bin/Release/netcoreapp2.0
+mkdir -p ../../tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp2.0
+cp libCarbon.Codecs.Heif.Native.dll.dylib ../../tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp2.0

@@ -18,7 +18,7 @@ chmod +x ./configure
 ./configure --disable-shared --disable-go --prefix=/usr/local CFLAGS="$FLAGS" CXXFLAGS="$FLAGS" PKG_CONFIG_PATH="$PKG_PATH"
 make install
 
-# Build Heif.native
-cd ../../Heif.Native
+# Build Carbon.Codecs.Heif.native
+cd ../../Carbon.Codecs.Heif.Native
 cmake .
 make

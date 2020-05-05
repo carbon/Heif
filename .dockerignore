@@ -1,8 +1,8 @@
 .vs
-src/Heif/bin
-src/Heif/obj
-src/Heif.Native/x64
+src/Carbon.Codecs.Heif/bin
+src/Carbon.Codecs.Heif/obj
+src/Carbon.Codecs.Heif.Native/x64
 src/libde265/code
 src/libheif/code
-tests/Heif.Tests/bin
-tests/Heif.Tests/obj
+tests/Carbon.Codecs.Heif.Tests/bin
+tests/Carbon.Codecs.Heif.Tests/obj

@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Carbon.Codecs.Heif.Tests</AssemblyName>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Platforms>x64</Platforms>
   </PropertyGroup>
@@ -21,7 +20,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <CodeAnalysisRuleSet>Heif.Tests.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>Carbon.Codecs.Heif.Tests.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Heif\Heif.csproj" />
+    <ProjectReference Include="..\..\src\Carbon.Codecs.Heif\Carbon.Codecs.Heif.csproj" />
   </ItemGroup>
 
 </Project>

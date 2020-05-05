@@ -21,7 +21,7 @@ namespace Carbon.Codecs.Heif.Tests
         {
             var assembly = typeof(TestFiles).Assembly;
 
-            using (var stream = assembly.GetManifestResourceStream($"Heif.Tests.images.{fileName}"))
+            using (var stream = assembly.GetManifestResourceStream($"Carbon.Codecs.Heif.Tests.images.{fileName}"))
             {
                 using (MemoryStream memoryStream = new MemoryStream())
                 {

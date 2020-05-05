@@ -19,6 +19,6 @@ chmod +x ./configure
 make install
 
 # Build Heif.native
-cd ../../Heif.Native
+cd ../../Carbon.Codecs.Heif.Native
 cmake . -D PLATFORM=MACOS
 make

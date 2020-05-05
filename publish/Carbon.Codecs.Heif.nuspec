@@ -21,8 +21,8 @@
   <files>
     <file src="Carbon.png" target=""/>
     <file src="windows\Carbon.Codecs.Heif.dll" target="lib\netstandard2.0"/>
-    <file src="windows\Heif.Native.dll" target="runtimes\win-x64"/>
-    <file src="linux\Heif.Native.dll.so" target="runtimes\linux-x64"/>
-    <file src="macos\Heif.Native.dll.dylib" target="runtimes\osx-x64"/>
+    <file src="windows\Carbon.Codecs.Heif.Native.dll" target="runtimes\win-x64"/>
+    <file src="linux\Carbon.Codecs.Heif.Native.dll.so" target="runtimes\linux-x64"/>
+    <file src="macos\Carbon.Codecs.Heif.Native.dll.dylib" target="runtimes\osx-x64"/>
   </files>
 </package>

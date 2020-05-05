@@ -91,5 +91,5 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <Import Project="Heif.Native.targets" />
+  <Import Project="Carbon.Codecs.Heif.Native.targets" />
 </Project>

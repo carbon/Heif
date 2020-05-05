@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.8.8)
 
-set(LIBRARY_NAME Heif.Native.dll)
+set(LIBRARY_NAME Carbon.Codecs.Heif.Native.dll)
 
 project(${LIBRARY_NAME})
 

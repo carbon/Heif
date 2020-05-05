@@ -5,6 +5,6 @@ namespace Carbon.Codecs.Heif
 {
     internal static class NativeLibrary
     {
-        public const string Name = "Heif.Native.dll";
+        public const string Name = "Carbon.Codecs.Heif.Native.dll";
     }
 }

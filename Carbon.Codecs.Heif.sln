@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Heif.Native", "src\Heif.Native\Heif.Native.vcxproj", "{F352202A-70F8-4D52-894D-9EF61C391EE3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Carbon.Codecs.Heif.Native", "src\Carbon.Codecs.Heif.Native\Carbon.Codecs.Heif.Native.vcxproj", "{F352202A-70F8-4D52-894D-9EF61C391EE3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3123669C-4AFA-323F-A3FD-3A9EF3320ECB} = {3123669C-4AFA-323F-A3FD-3A9EF3320ECB}
 	EndProjectSection
@@ -26,14 +26,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "native", "native", "{100BC2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F891C3F1-995A-471C-B5F1-09BAA97DC86C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heif", "src\Heif\Heif.csproj", "{2A7EB5D7-6507-4A4E-8348-2D256D7408A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carbon.Codecs.Heif", "src\Carbon.Codecs.Heif\Carbon.Codecs.Heif.csproj", "{2A7EB5D7-6507-4A4E-8348-2D256D7408A1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F352202A-70F8-4D52-894D-9EF61C391EE3} = {F352202A-70F8-4D52-894D-9EF61C391EE3}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{148DECE0-729A-4A67-A584-FE0D604BBF74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heif.Tests", "tests\Heif.Tests\Heif.Tests.csproj", "{0A5E9233-A2C6-4D81-9BFD-A6D93CEB4B85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carbon.Codecs.Heif.Tests", "tests\Carbon.Codecs.Heif.Tests\Carbon.Codecs.Heif.Tests.csproj", "{0A5E9233-A2C6-4D81-9BFD-A6D93CEB4B85}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{61391E04-05F0-4A76-9572-8FA0FF212FD0}"
 	ProjectSection(SolutionItems) = preProject

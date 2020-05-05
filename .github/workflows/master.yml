@@ -39,7 +39,7 @@ jobs:
 
     - name: Copy Native
       run: ../../build/linux/copy.Native.sh ../../artifacts
-      working-directory: src/Heif.Native
+      working-directory: src/Carbon.Codecs.Heif.Native
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v1
@@ -67,12 +67,12 @@ jobs:
 
     - name: Copy linux library
       run: |
-        mkdir -p tests/Heif.Tests/bin/Release/netcoreapp2.0
-        cp linux/* tests/Heif.Tests/bin/Release/netcoreapp2.0
+        mkdir -p tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp2.0
+        cp linux/* tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp2.0
 
     - name: Build and test Heif
       run: ../../build/linux/test.Heif.sh
-      working-directory: tests/Heif.Tests
+      working-directory: tests/Carbon.Codecs.Heif.Tests
 
   macos:
     name: Build and Test MacOS
