@@ -17,6 +17,15 @@ namespace Carbon.Codecs.Heif.Tests
                     Assert.Equal(HeifColorProfileType.NotPresent, image.ColorProfileType);
                 }
             }
+
+            [Fact]
+            public void ShouldReturnTheCorrectTypeWhenImageHasColorProfile()
+            {
+                using (var image = HeifImage.Decode(TestFiles.Dog))
+                {
+                    Assert.Equal(HeifColorProfileType.Prof, image.ColorProfileType);
+                }
+            }
         }
     }
 }
