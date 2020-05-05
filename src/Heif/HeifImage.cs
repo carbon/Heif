@@ -154,6 +154,27 @@ namespace Carbon.Codecs.Heif
         }
 
         /// <summary>
+        /// Returns the raw color profile of the image.
+        /// </summary>
+        /// <returns>The raw color profile of the image.</returns>
+        public HeifRawColorProfile? GetRawColorProfile()
+        {
+            var type = this.ColorProfileType;
+            if (type == HeifColorProfileType.NotPresent)
+            {
+                return null;
+            }
+
+            var data = this.handle.GetRawColorProfile();
+            if (data == null)
+            {
+                return null;
+            }
+
+            return new HeifRawColorProfile(data, type);
+        }
+
+        /// <summary>
         /// Returns a byte array of the Y, Cb and Cr channels for each pixel in the image.
         /// </summary>
         /// <returns>A byte array of the Y, Cb and Cr channels.</returns>

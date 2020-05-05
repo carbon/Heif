@@ -51,6 +51,24 @@ namespace Carbon.Codecs.Heif
             return result;
         }
 
+        public byte[]? GetRawColorProfile()
+        {
+            var size = this.nativeInstance.GetRawColorProfileSize();
+            if (size == 0)
+            {
+                return null;
+            }
+
+            var result = new byte[size];
+
+            if (this.nativeInstance.GetRawColorProfileData(result) != 0)
+            {
+                return null;
+            }
+
+            return result;
+        }
+
         internal static IntPtr GetInstance(HeifImageHandle handle)
         {
             if (handle == null)

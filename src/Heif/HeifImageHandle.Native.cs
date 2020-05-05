@@ -35,6 +35,12 @@ namespace Carbon.Codecs.Heif
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern int HeifImageHandle_GetExifProfileData(IntPtr instance, uint exif_id, byte[] data);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern uint HeifImageHandle_GetRawColorProfileSize(IntPtr instance);
+
+            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
+            public static extern uint HeifImageHandle_GetRawColorProfileData(IntPtr Instance, byte[] data);
         }
 
         private sealed class NativeHeifImageHandle : NativeInstance
@@ -76,6 +82,10 @@ namespace Carbon.Codecs.Heif
                 var result = NativeMethods.HeifImageHandle_GetExifProfileData(this.Instance, exifId, data);
                 return result == 0;
             }
+
+            public uint GetRawColorProfileSize() => NativeMethods.HeifImageHandle_GetRawColorProfileSize(this.Instance);
+
+            public uint GetRawColorProfileData(byte[] data) => NativeMethods.HeifImageHandle_GetRawColorProfileData(this.Instance, data);
 
             protected override void Dispose(IntPtr instance)
             {

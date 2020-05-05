@@ -74,3 +74,17 @@ HEIF_NATIVE_EXPORT int HeifImageHandle_GetExifProfileData(struct heif_image_hand
   error = heif_image_handle_get_metadata(image_handle, exif_id, buffer);
   return error.code;
 }
+
+HEIF_NATIVE_EXPORT size_t HeifImageHandle_GetRawColorProfileSize(struct heif_image_handle *image_handle)
+{
+  return heif_image_handle_get_raw_color_profile_size(image_handle);
+}
+
+HEIF_NATIVE_EXPORT enum heif_error_code HeifImageHandle_GetRawColorProfileData(struct heif_image_handle *image_handle, unsigned char *buffer)
+{
+  struct heif_error
+    error;
+
+  error = heif_image_handle_get_raw_color_profile(image_handle, buffer);
+  return error.code;
+}
