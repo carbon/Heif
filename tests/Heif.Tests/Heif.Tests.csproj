@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <AssemblyName>Carbon.Codecs.Heif.Tests</AssemblyName>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Platforms>x64</Platforms>
   </PropertyGroup>
