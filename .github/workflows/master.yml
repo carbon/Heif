@@ -102,11 +102,11 @@ jobs:
 
     - name: Copy Native
       run: ../../build/macos/copy.Native.sh ../../artifacts
-      working-directory: src/Heif.Native
+      working-directory: src/Carbon.Codecs.Heif.Native
 
     - name: Build and test Heif
       run: ../../build/macos/test.Heif.sh
-      working-directory: tests/Heif.Tests
+      working-directory: tests/Carbon.Codecs.Heif.Tests
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v1

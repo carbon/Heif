@@ -22,4 +22,4 @@ function buildSolution($solution, $properties)
     Set-Location $location
 }
 
-buildSolution "Heif.sln" "Configuration=Release,Platform=x64"
+buildSolution "Carbon.Codecs.Heif.sln" "Configuration=Release,Platform=x64"
