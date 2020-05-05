@@ -22,5 +22,10 @@ namespace Carbon.Codecs.Heif
         /// Nclx
         /// </summary>
         Nclx = 1852009592,
+
+        /// <summary>
+        /// Prof
+        /// </summary>
+        Prof = 1886547814,
     }
 }
