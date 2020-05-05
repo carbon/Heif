@@ -20,6 +20,17 @@ namespace Carbon.Codecs.Heif.Tests
                     Assert.Equal(176, profile.Length);
                 }
             }
+
+            [Fact]
+            public void ShouldReturnNullForImageWithoutExifProfile()
+            {
+                using (var image = HeifImage.Decode(TestFiles.Camel))
+                {
+                    var profile = image.GetExifProfile();
+
+                    Assert.Null(profile);
+                }
+            }
         }
     }
 }
