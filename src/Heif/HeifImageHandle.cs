@@ -18,6 +18,8 @@ namespace Carbon.Codecs.Heif
             context.AddReference();
         }
 
+        public HeifColorProfileType ColorProfileType => this.nativeInstance.ColorProfileType;
+
         public int Width => this.nativeInstance.Width;
 
         public int Height => this.nativeInstance.Height;

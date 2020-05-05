@@ -34,6 +34,11 @@ HEIF_NATIVE_EXPORT struct heif_image_handle *HeifImageHandle_Create(struct heif_
   return HeifImageHandle_CreateById(context, primary_image_id);
 }
 
+HEIF_NATIVE_EXPORT enum heif_color_profile_type HeifImageHandle_ColorProfileType(struct heif_image_handle *image_handle)
+{
+  return heif_image_handle_get_color_profile_type(image_handle);
+}
+
 HEIF_NATIVE_EXPORT int HeifImageHandle_Height(struct heif_image_handle *image_handle)
 {
   return heif_image_handle_get_height(image_handle);

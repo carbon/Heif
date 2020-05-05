@@ -26,7 +26,7 @@ namespace Carbon.Codecs.Heif
         /// <summary>
         /// Gets the color profile type.
         /// </summary>
-        public HeifColorProfileType ColorProfileType => this.nativeInstance.ColorProfileType;
+        public HeifColorProfileType ColorProfileType => this.handle.ColorProfileType;
 
         /// <summary>
         /// Gets the metadata of the image.

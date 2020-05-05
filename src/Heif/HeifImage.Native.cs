@@ -14,9 +14,6 @@ namespace Carbon.Codecs.Heif
         private static class NativeMethods
         {
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
-            public static extern uint HeifImage_ColorProfileType(IntPtr instance);
-
-            [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
             public static extern int HeifImage_Height(IntPtr instance);
 
             [DllImport(NativeLibrary.Name, CallingConvention = CallingConvention.Cdecl)]
@@ -48,8 +45,6 @@ namespace Carbon.Codecs.Heif
             public int Height => NativeMethods.HeifImage_Height(this.Instance);
 
             public int Width => NativeMethods.HeifImage_Width(this.Instance);
-
-            public HeifColorProfileType ColorProfileType => (HeifColorProfileType)NativeMethods.HeifImage_ColorProfileType(this.Instance);
 
             protected override string TypeName => nameof(HeifImage);
 
