@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-git clone https://github.com/strukturag/libheif code
+git clone https://github.com/ImageMagick/aom code
 cd code
-git checkout tags/v1.6.1
+git checkout e2d48104f26fb634031f104da5b7a3a9bfe81673
