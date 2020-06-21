@@ -91,6 +91,17 @@
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aom\aom.vcxproj">
+      <Project>{7a84c544-3429-4f5e-af99-30ec430b427a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libde265\code\libde265\libde265.vcxproj">
+      <Project>{1e9c4c60-5215-3991-aa63-c64775505761}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libheif\code\libheif\heif.vcxproj">
+      <Project>{f75e440f-b3c1-33d6-ac7d-e1ca2338ddf5}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
