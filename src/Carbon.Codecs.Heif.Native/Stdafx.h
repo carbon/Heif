@@ -10,6 +10,7 @@
 
 #if defined(HEIF_NATIVE_WINDOWS)
 
+__pragma(comment(lib, "aom.lib"))
 __pragma(comment(lib, "libde265.lib"))
 __pragma(comment(lib, "heif.lib"))
 

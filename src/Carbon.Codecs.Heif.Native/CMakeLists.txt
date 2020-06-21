@@ -26,6 +26,7 @@ target_link_libraries(
 
     ${LIB_DIR}/libheif.a
     ${LIB_DIR}/libde265.a
+    ${LIB_DIR}/libaom.a
 
     ${THREADLIB}
 
