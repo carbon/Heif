@@ -28,6 +28,16 @@ namespace Carbon.Codecs.Heif.Tests
                     Assert.Equal(1064, image.Metadata.Height);
                 }
             }
+
+            [Fact]
+            public void ShouldBeAbleToDecodeAvifFile()
+            {
+                using (var image = HeifImage.Decode(TestFiles.Bbb_4k))
+                {
+                    Assert.Equal(3840, image.Metadata.Width);
+                    Assert.Equal(2160, image.Metadata.Height);
+                }
+            }
         }
     }
 }

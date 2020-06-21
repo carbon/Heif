@@ -7,6 +7,8 @@ namespace Carbon.Codecs.Heif.Tests
 {
     public static class TestFiles
     {
+        public static byte[] Bbb_4k => LoadEmbeddedImage("bbb_4k.avif");
+
         public static byte[] C034 => LoadEmbeddedImage("C034.heic");
 
         public static byte[] Camel => LoadEmbeddedImage("camel.heic");
