@@ -21,7 +21,7 @@ set(libheif_headers
     ${CMAKE_CURRENT_BINARY_DIR}/heif_version.h
 )
 
-add_library(heif
+add_library(heif STATIC
     bitstream.cc
     box.cc
     error.cc
@@ -54,7 +54,8 @@ set_target_properties(heif
 
 target_compile_definitions(heif
                            PUBLIC
-                               LIBHEIF_EXPORTS
+                               LIBDE265_STATIC_BUILD
+                               LIBHEIF_STATIC_BUILD
                                HAVE_VISIBILITY)
 
 if(LIBDE265_FOUND)
