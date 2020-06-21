@@ -6,6 +6,8 @@ Release
 *.user
 build/linux/output
 build/windows/nuget.exe
+src/aom/code
+src/aom/x64
 src/Carbon.Codecs.Heif.Native/x64
 src/libde265/code
 src/libheif/code
