@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="2.5">
     <id>Carbon.Codecs.Heif</id>
-    <version>1.0.0</version>
-    <title>Heif</title>
+    <version>1.1.0</version>
+    <title>Carbon.Codecs.Heif</title>
     <authors>Carbon and contributors</authors>
     <owners>Carbon and contributors</owners>
     <license type="expression">MIT</license>
@@ -13,7 +13,7 @@
     <description>Heif</description>
     <summary>Heif</summary>
     <copyright>Copyright (c) Carbon and contributors.</copyright>
-    <tags>Heif</tags>
+    <tags>heif;avif;codecs</tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0"/>
     </dependencies>
