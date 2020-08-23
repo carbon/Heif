@@ -72,6 +72,7 @@
     <ClCompile Include="code\aom\src\aom_decoder.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <ClCompile Include="code\aom\src\aom_encoder.c" />
     <ClCompile Include="code\aom\src\aom_image.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -114,6 +115,7 @@
     <ClCompile Include="code\aom_dsp\blend_a64_vmask.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <ClCompile Include="code\aom_dsp\blk_sse_sum.c" />
     <ClCompile Include="code\aom_dsp\entcode.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -150,21 +152,26 @@
     <ClCompile Include="code\aom_dsp\noise_util.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <ClCompile Include="code\aom_dsp\psnr.c" />
     <ClCompile Include="code\aom_dsp\psnrhvs.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ClCompile Include="code\aom_dsp\quantize.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <ClCompile Include="code\aom_dsp\sad.c" />
     <ClCompile Include="code\aom_dsp\sad_av1.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <ClCompile Include="code\aom_dsp\sse.c" />
+    <ClCompile Include="code\aom_dsp\ssim.c" />
     <ClCompile Include="code\aom_dsp\subtract.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ClCompile Include="code\aom_dsp\sum_squares.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <ClCompile Include="code\aom_dsp\variance.c" />
     <ClCompile Include="code\aom_mem\aom_mem.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -318,6 +325,69 @@
     <ClCompile Include="code\av1\decoder\obu.c">
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <ClCompile Include="code\av1\encoder\aq_complexity.c" />
+    <ClCompile Include="code\av1\encoder\aq_cyclicrefresh.c" />
+    <ClCompile Include="code\av1\encoder\aq_variance.c" />
+    <ClCompile Include="code\av1\encoder\av1_fwd_txfm1d.c" />
+    <ClCompile Include="code\av1\encoder\av1_fwd_txfm2d.c" />
+    <ClCompile Include="code\av1\encoder\av1_multi_thread.c" />
+    <ClCompile Include="code\av1\encoder\av1_quantize.c" />
+    <ClCompile Include="code\av1\encoder\bitstream.c" />
+    <ClCompile Include="code\av1\encoder\blockiness.c" />
+    <ClCompile Include="code\av1\encoder\cnn.c" />
+    <ClCompile Include="code\av1\encoder\compound_type.c" />
+    <ClCompile Include="code\av1\encoder\context_tree.c" />
+    <ClCompile Include="code\av1\encoder\corner_detect.c" />
+    <ClCompile Include="code\av1\encoder\corner_match.c" />
+    <ClCompile Include="code\av1\encoder\cost.c" />
+    <ClCompile Include="code\av1\encoder\dwt.c" />
+    <ClCompile Include="code\av1\encoder\encodeframe.c" />
+    <ClCompile Include="code\av1\encoder\encodemb.c" />
+    <ClCompile Include="code\av1\encoder\encodemv.c" />
+    <ClCompile Include="code\av1\encoder\encoder.c" />
+    <ClCompile Include="code\av1\encoder\encodetxb.c" />
+    <ClCompile Include="code\av1\encoder\encode_strategy.c" />
+    <ClCompile Include="code\av1\encoder\ethread.c" />
+    <ClCompile Include="code\av1\encoder\extend.c" />
+    <ClCompile Include="code\av1\encoder\firstpass.c" />
+    <ClCompile Include="code\av1\encoder\global_motion.c" />
+    <ClCompile Include="code\av1\encoder\gop_structure.c" />
+    <ClCompile Include="code\av1\encoder\hash.c" />
+    <ClCompile Include="code\av1\encoder\hash_motion.c" />
+    <ClCompile Include="code\av1\encoder\hybrid_fwd_txfm.c" />
+    <ClCompile Include="code\av1\encoder\interp_search.c" />
+    <ClCompile Include="code\av1\encoder\intra_mode_search.c" />
+    <ClCompile Include="code\av1\encoder\level.c" />
+    <ClCompile Include="code\av1\encoder\lookahead.c" />
+    <ClCompile Include="code\av1\encoder\mcomp.c" />
+    <ClCompile Include="code\av1\encoder\ml.c" />
+    <ClCompile Include="code\av1\encoder\motion_search_facade.c" />
+    <ClCompile Include="code\av1\encoder\mv_prec.c" />
+    <ClCompile Include="code\av1\encoder\nonrd_pickmode.c" />
+    <ClCompile Include="code\av1\encoder\palette.c" />
+    <ClCompile Include="code\av1\encoder\partition_strategy.c" />
+    <ClCompile Include="code\av1\encoder\pass2_strategy.c" />
+    <ClCompile Include="code\av1\encoder\pickcdef.c" />
+    <ClCompile Include="code\av1\encoder\picklpf.c" />
+    <ClCompile Include="code\av1\encoder\pickrst.c" />
+    <ClCompile Include="code\av1\encoder\ransac.c" />
+    <ClCompile Include="code\av1\encoder\ratectrl.c" />
+    <ClCompile Include="code\av1\encoder\rd.c" />
+    <ClCompile Include="code\av1\encoder\rdopt.c" />
+    <ClCompile Include="code\av1\encoder\reconinter_enc.c" />
+    <ClCompile Include="code\av1\encoder\segmentation.c" />
+    <ClCompile Include="code\av1\encoder\speed_features.c" />
+    <ClCompile Include="code\av1\encoder\svc_layercontext.c" />
+    <ClCompile Include="code\av1\encoder\temporal_filter.c" />
+    <ClCompile Include="code\av1\encoder\tokenize.c" />
+    <ClCompile Include="code\av1\encoder\tpl_model.c" />
+    <ClCompile Include="code\av1\encoder\tx_search.c" />
+    <ClCompile Include="code\av1\encoder\var_based_part.c" />
+    <ClCompile Include="code\av1\encoder\wedge_utils.c" />
+    <ClCompile Include="code\third_party\fastfeat\fast.c" />
+    <ClCompile Include="code\third_party\fastfeat\fast_9.c" />
+    <ClCompile Include="code\third_party\fastfeat\nonmax.c" />
+    <ClCompile Include="code\third_party\vector\vector.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\aom_dsp\aom_dsp_common.h" />
@@ -399,6 +469,79 @@
     <ClInclude Include="code\av1\decoder\detokenize.h" />
     <ClInclude Include="code\av1\decoder\dthread.h" />
     <ClInclude Include="code\av1\decoder\obu.h" />
+    <ClInclude Include="code\av1\encoder\aq_complexity.h" />
+    <ClInclude Include="code\av1\encoder\aq_cyclicrefresh.h" />
+    <ClInclude Include="code\av1\encoder\aq_variance.h" />
+    <ClInclude Include="code\av1\encoder\av1_fwd_txfm1d.h" />
+    <ClInclude Include="code\av1\encoder\av1_fwd_txfm1d_cfg.h" />
+    <ClInclude Include="code\av1\encoder\av1_multi_thread.h" />
+    <ClInclude Include="code\av1\encoder\av1_quantize.h" />
+    <ClInclude Include="code\av1\encoder\bitstream.h" />
+    <ClInclude Include="code\av1\encoder\block.h" />
+    <ClInclude Include="code\av1\encoder\cnn.h" />
+    <ClInclude Include="code\av1\encoder\compound_type.h" />
+    <ClInclude Include="code\av1\encoder\context_tree.h" />
+    <ClInclude Include="code\av1\encoder\corner_detect.h" />
+    <ClInclude Include="code\av1\encoder\corner_match.h" />
+    <ClInclude Include="code\av1\encoder\cost.h" />
+    <ClInclude Include="code\av1\encoder\dwt.h" />
+    <ClInclude Include="code\av1\encoder\encodeframe.h" />
+    <ClInclude Include="code\av1\encoder\encodemb.h" />
+    <ClInclude Include="code\av1\encoder\encodemv.h" />
+    <ClInclude Include="code\av1\encoder\encoder.h" />
+    <ClInclude Include="code\av1\encoder\encodetxb.h" />
+    <ClInclude Include="code\av1\encoder\encode_strategy.h" />
+    <ClInclude Include="code\av1\encoder\enc_enums.h" />
+    <ClInclude Include="code\av1\encoder\ethread.h" />
+    <ClInclude Include="code\av1\encoder\extend.h" />
+    <ClInclude Include="code\av1\encoder\firstpass.h" />
+    <ClInclude Include="code\av1\encoder\global_motion.h" />
+    <ClInclude Include="code\av1\encoder\gop_structure.h" />
+    <ClInclude Include="code\av1\encoder\grain_test_vectors.h" />
+    <ClInclude Include="code\av1\encoder\hash.h" />
+    <ClInclude Include="code\av1\encoder\hash_motion.h" />
+    <ClInclude Include="code\av1\encoder\hybrid_fwd_txfm.h" />
+    <ClInclude Include="code\av1\encoder\interp_search.h" />
+    <ClInclude Include="code\av1\encoder\intra_mode_search.h" />
+    <ClInclude Include="code\av1\encoder\k_means_template.h" />
+    <ClInclude Include="code\av1\encoder\level.h" />
+    <ClInclude Include="code\av1\encoder\lookahead.h" />
+    <ClInclude Include="code\av1\encoder\mathutils.h" />
+    <ClInclude Include="code\av1\encoder\mcomp.h" />
+    <ClInclude Include="code\av1\encoder\misc_model_weights.h" />
+    <ClInclude Include="code\av1\encoder\ml.h" />
+    <ClInclude Include="code\av1\encoder\model_rd.h" />
+    <ClInclude Include="code\av1\encoder\mode_prune_model_weights.h" />
+    <ClInclude Include="code\av1\encoder\motion_search_facade.h" />
+    <ClInclude Include="code\av1\encoder\mv_prec.h" />
+    <ClInclude Include="code\av1\encoder\palette.h" />
+    <ClInclude Include="code\av1\encoder\partition_cnn_weights.h" />
+    <ClInclude Include="code\av1\encoder\partition_model_weights.h" />
+    <ClInclude Include="code\av1\encoder\partition_strategy.h" />
+    <ClInclude Include="code\av1\encoder\pass2_strategy.h" />
+    <ClInclude Include="code\av1\encoder\picklpf.h" />
+    <ClInclude Include="code\av1\encoder\pickrst.h" />
+    <ClInclude Include="code\av1\encoder\pustats.h" />
+    <ClInclude Include="code\av1\encoder\random.h" />
+    <ClInclude Include="code\av1\encoder\ransac.h" />
+    <ClInclude Include="code\av1\encoder\ratectrl.h" />
+    <ClInclude Include="code\av1\encoder\rd.h" />
+    <ClInclude Include="code\av1\encoder\rdopt.h" />
+    <ClInclude Include="code\av1\encoder\rdopt_data_defs.h" />
+    <ClInclude Include="code\av1\encoder\rdopt_utils.h" />
+    <ClInclude Include="code\av1\encoder\reconinter_enc.h" />
+    <ClInclude Include="code\av1\encoder\segmentation.h" />
+    <ClInclude Include="code\av1\encoder\speed_features.h" />
+    <ClInclude Include="code\av1\encoder\svc_layercontext.h" />
+    <ClInclude Include="code\av1\encoder\temporal_filter.h" />
+    <ClInclude Include="code\av1\encoder\tokenize.h" />
+    <ClInclude Include="code\av1\encoder\tpl_model.h" />
+    <ClInclude Include="code\av1\encoder\tx_prune_model_weights.h" />
+    <ClInclude Include="code\av1\encoder\tx_search.h" />
+    <ClInclude Include="code\av1\encoder\use_flat_gop_model_params.h" />
+    <ClInclude Include="code\av1\encoder\var_based_part.h" />
+    <ClInclude Include="code\third_party\fastfeat\fast.h" />
+    <ClInclude Include="code\third_party\vector\vector.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

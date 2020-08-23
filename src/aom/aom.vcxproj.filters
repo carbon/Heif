@@ -253,6 +253,216 @@
     <ClCompile Include="code\av1\decoder\obu.c">
       <Filter>av1\decoder</Filter>
     </ClCompile>
+    <ClCompile Include="code\aom\src\aom_encoder.c">
+      <Filter>aom\src</Filter>
+    </ClCompile>
+    <ClCompile Include="code\aom_dsp\blk_sse_sum.c">
+      <Filter>aom_dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="code\aom_dsp\psnr.c">
+      <Filter>aom_dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="code\aom_dsp\sad.c">
+      <Filter>aom_dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="code\aom_dsp\sse.c">
+      <Filter>aom_dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="code\aom_dsp\ssim.c">
+      <Filter>aom_dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="code\aom_dsp\variance.c">
+      <Filter>aom_dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\aq_complexity.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\aq_cyclicrefresh.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\aq_variance.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\av1_fwd_txfm1d.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\av1_fwd_txfm2d.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\av1_multi_thread.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\av1_quantize.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\bitstream.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\blockiness.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\cnn.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\compound_type.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\context_tree.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\corner_detect.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\corner_match.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\cost.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\dwt.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encode_strategy.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encodeframe.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encodemb.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encodemv.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encoder.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encodetxb.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\ethread.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\extend.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\firstpass.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\global_motion.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\gop_structure.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\hash.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\hash_motion.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\hybrid_fwd_txfm.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\interp_search.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\intra_mode_search.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\level.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\lookahead.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\mcomp.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\ml.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\motion_search_facade.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\mv_prec.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\nonrd_pickmode.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\palette.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\partition_strategy.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\pass2_strategy.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\pickcdef.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\picklpf.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\pickrst.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\ransac.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\ratectrl.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\rd.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\rdopt.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\reconinter_enc.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\segmentation.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\speed_features.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\svc_layercontext.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\temporal_filter.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\tokenize.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\tpl_model.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\tx_search.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\var_based_part.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\wedge_utils.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\third_party\fastfeat\fast.c">
+      <Filter>third_party\fastfeat</Filter>
+    </ClCompile>
+    <ClCompile Include="code\third_party\fastfeat\fast_9.c">
+      <Filter>third_party\fastfeat</Filter>
+    </ClCompile>
+    <ClCompile Include="code\third_party\fastfeat\nonmax.c">
+      <Filter>third_party\fastfeat</Filter>
+    </ClCompile>
+    <ClCompile Include="code\third_party\vector\vector.c">
+      <Filter>third_party\vector</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="code\aom_dsp\aom_dsp_common.h">
@@ -492,6 +702,225 @@
     <CLInclude Include="code\av1\decoder\obu.h">
       <Filter>av1\decoder</Filter>
     </CLInclude>
+    <ClInclude Include="code\av1\encoder\aq_complexity.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\aq_cyclicrefresh.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\aq_variance.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\av1_fwd_txfm1d.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\av1_fwd_txfm1d_cfg.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\av1_multi_thread.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\av1_quantize.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\bitstream.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\block.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\cnn.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\compound_type.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\context_tree.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\corner_detect.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\corner_match.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\cost.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\dwt.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\enc_enums.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encode_strategy.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encodeframe.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encodemb.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encodemv.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encoder.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encodetxb.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\ethread.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\extend.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\firstpass.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\global_motion.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\gop_structure.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\grain_test_vectors.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\hash.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\hash_motion.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\hybrid_fwd_txfm.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\interp_search.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\intra_mode_search.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\k_means_template.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\level.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\lookahead.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\mathutils.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\mcomp.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\misc_model_weights.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\ml.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\mode_prune_model_weights.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\model_rd.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\motion_search_facade.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\mv_prec.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\palette.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\partition_cnn_weights.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\partition_model_weights.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\partition_strategy.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\pass2_strategy.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\picklpf.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\pickrst.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\pustats.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\random.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\ransac.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\ratectrl.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\rd.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\rdopt.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\rdopt_data_defs.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\rdopt_utils.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\reconinter_enc.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\segmentation.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\speed_features.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\svc_layercontext.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\temporal_filter.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\tokenize.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\tpl_model.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\tx_prune_model_weights.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\tx_search.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\use_flat_gop_model_params.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\var_based_part.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\third_party\fastfeat\fast.h">
+      <Filter>third_party\fastfeat</Filter>
+    </ClInclude>
+    <ClInclude Include="code\third_party\vector\vector.h">
+      <Filter>third_party\vector</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="aom\src">
@@ -523,6 +952,18 @@
     </Filter>
     <Filter Include="av1\decoder">
       <UniqueIdentifier>{7b16c29b-b51e-48e6-8bf1-886feae87d79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="av1\encoder">
+      <UniqueIdentifier>{7286a8b9-a228-4fe9-98a1-db4e679496ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party">
+      <UniqueIdentifier>{4d54a213-6b70-4889-b855-91ed029f5d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fastfeat">
+      <UniqueIdentifier>{bb9367ef-8571-48ae-b676-e0b0eeff1e5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\vector">
+      <UniqueIdentifier>{9fedcfb7-ac8b-44ff-a267-3e7547a07cca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

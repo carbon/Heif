@@ -98,6 +98,8 @@ if(AOM_FOUND)
   target_sources(heif PRIVATE
     heif_decoder_aom.cc
     heif_decoder_aom.h
+    heif_encoder_aom.cc
+    heif_encoder_aom.h
   )
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${AOM_CFLAGS}")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${AOM_CFLAGS}")
