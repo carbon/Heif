@@ -3,4 +3,4 @@ set -e
 
 git clone https://github.com/ImageMagick/libheif code
 cd code
-git checkout debdbeecf0380afa222b992730cfdd9ee7f6e2bc
+git checkout e106504e3bf32882c8fc89972e22bcdc816a11b4
