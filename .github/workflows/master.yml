@@ -71,8 +71,8 @@ jobs:
 
     - name: Copy linux library
       run: |
-        mkdir -p tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp2.0
-        cp linux/* tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp2.0
+        mkdir -p tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
+        cp linux/* tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
 
     - name: Build and test Heif
       run: ../../build/linux/test.Heif.sh
