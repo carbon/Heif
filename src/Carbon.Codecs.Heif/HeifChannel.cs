@@ -9,7 +9,7 @@ namespace Carbon.Codecs.Heif
     public enum HeifChannel
     {
         /// <summary>
-        /// Y channel
+        /// Y channel.
         /// </summary>
         Y = 0,
 

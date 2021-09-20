@@ -9,22 +9,22 @@ namespace Carbon.Codecs.Heif
     public enum HeifColorProfileType
     {
         /// <summary>
-        /// Not present
+        /// Not present.
         /// </summary>
         NotPresent = 0,
 
         /// <summary>
-        /// Icc
+        /// Icc.
         /// </summary>
         Icc = 1917403971,
 
         /// <summary>
-        /// Nclx
+        /// Nclx.
         /// </summary>
         Nclx = 1852009592,
 
         /// <summary>
-        /// Prof
+        /// Prof.
         /// </summary>
         Prof = 1886547814,
     }
