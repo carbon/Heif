@@ -7,7 +7,7 @@ function runTests()
 {
     $vstest = "$($env:VSINSTALLDIR)\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"
 
-    $folder = fullPath "tests\Carbon.Codecs.Heif.Tests\bin\x64\Release\netcoreapp2.0"
+    $folder = fullPath "tests\Carbon.Codecs.Heif.Tests\bin\x64\Release\netcoreapp3.1"
     $fileName = "$folder\Carbon.Codecs.Heif.Tests.dll"
 
     & $vstest $fileName /platform:x64 /TestAdapterPath:$folder
