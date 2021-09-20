@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 
 RUN mkdir /build
 
@@ -10,9 +10,9 @@ COPY src /heif/src
 
 COPY tests /heif/tests
 
-RUN mkdir -p /heif/tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
+RUN mkdir -p /heif/tests/Carbon.Codecs.Heif.Tests/bin/Release/net5.0
 
-COPY build/linux/output/Carbon.Codecs.Heif.Native.dll.so /heif/tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
+COPY build/linux/output/Carbon.Codecs.Heif.Native.dll.so /heif/tests/Carbon.Codecs.Heif.Tests/bin/Release/net5.0
 
 COPY /build/linux/test.Heif.sh /build
 

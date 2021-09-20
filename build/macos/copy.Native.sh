@@ -5,5 +5,5 @@ set -e
 
 cp libCarbon.Codecs.Heif.Native.dll.dylib $1/Carbon.Codecs.Heif.Native.dll.dylib
 
-mkdir -p ../../tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
-cp libCarbon.Codecs.Heif.Native.dll.dylib ../../tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
+mkdir -p ../../tests/Carbon.Codecs.Heif.Tests/bin/Release/net5.0
+cp libCarbon.Codecs.Heif.Native.dll.dylib ../../tests/Carbon.Codecs.Heif.Tests/bin/Release/net5.0

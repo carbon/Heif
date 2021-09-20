@@ -4,6 +4,6 @@
       <NativeFiles Include="$(TargetDir)\$(TargetName).dll" />
     </ItemGroup>
 
-    <Copy SourceFiles="@(NativeFiles)" DestinationFolder="$(SolutionDir)\tests\Carbon.Codecs.Heif.Tests\bin\x64\$(Configuration)\netcoreapp3.1" />
+    <Copy SourceFiles="@(NativeFiles)" DestinationFolder="$(SolutionDir)\tests\Carbon.Codecs.Heif.Tests\bin\x64\$(Configuration)\net5.0" />
   </Target>
 </Project>

@@ -55,7 +55,7 @@ jobs:
     name: Test Linux
     needs: linux
     container:
-      image: mcr.microsoft.com/dotnet/sdk:3.1
+      image: mcr.microsoft.com/dotnet/sdk:5.0
     runs-on: ubuntu-latest
 
     steps:
@@ -71,8 +71,8 @@ jobs:
 
     - name: Copy linux library
       run: |
-        mkdir -p tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
-        cp linux/* tests/Carbon.Codecs.Heif.Tests/bin/Release/netcoreapp3.1
+        mkdir -p tests/Carbon.Codecs.Heif.Tests/bin/Release/net5.0
+        cp linux/* tests/Carbon.Codecs.Heif.Tests/bin/Release/net5.0
 
     - name: Build and test Heif
       run: ../../build/linux/test.Heif.sh
