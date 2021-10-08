@@ -289,9 +289,6 @@
     <ClCompile Include="code\av1\encoder\av1_fwd_txfm2d.c">
       <Filter>av1\encoder</Filter>
     </ClCompile>
-    <ClCompile Include="code\av1\encoder\av1_multi_thread.c">
-      <Filter>av1\encoder</Filter>
-    </ClCompile>
     <ClCompile Include="code\av1\encoder\av1_quantize.c">
       <Filter>av1\encoder</Filter>
     </ClCompile>
@@ -462,6 +459,39 @@
     </ClCompile>
     <ClCompile Include="code\third_party\vector\vector.c">
       <Filter>third_party\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\av1_noise_estimate.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encoder_utils.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\encodeframe_utils.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\global_motion_facade.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\optical_flow.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\partition_search.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\sparse_linear_solver.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\superres_scale.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\encoder\txb_rdopt.c">
+      <Filter>av1\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="code\common\args_helper.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="code\av1\arg_defs.c">
+      <Filter>av1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -717,9 +747,6 @@
     <ClInclude Include="code\av1\encoder\av1_fwd_txfm1d_cfg.h">
       <Filter>av1\encoder</Filter>
     </ClInclude>
-    <ClInclude Include="code\av1\encoder\av1_multi_thread.h">
-      <Filter>av1\encoder</Filter>
-    </ClInclude>
     <ClInclude Include="code\av1\encoder\av1_quantize.h">
       <Filter>av1\encoder</Filter>
     </ClInclude>
@@ -921,6 +948,51 @@
     <ClInclude Include="code\third_party\vector\vector.h">
       <Filter>third_party\vector</Filter>
     </ClInclude>
+    <ClInclude Include="code\av1\encoder\av1_ml_partition_models.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\av1_noise_estimate.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encodeframe_utils.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encoder_alloc.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\encoder_utils.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\global_motion_facade.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\intra_mode_search_utils.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\optical_flow.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\partition_search.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\pickcdef.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\rc_utils.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\sparse_linear_solver.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\superres_scale.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\txb_rdopt.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="code\av1\encoder\txb_rdopt_utils.h">
+      <Filter>av1\encoder</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="aom\src">
@@ -964,6 +1036,9 @@
     </Filter>
     <Filter Include="third_party\vector">
       <UniqueIdentifier>{9fedcfb7-ac8b-44ff-a267-3e7547a07cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e22abd47-98b1-48c4-a07a-48f498e231cf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
